@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>True360: BestPaidRep.com + VAST Sales Assistant Agent | The First External Intelligence Layer for Enterprise AI</title>
+    <title>True360: BestPaidRep.com + VAST Sales Assistant Agent | Built by Sales, for Sales</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -14,7 +14,6 @@
             --accent: #FF6B00;
             --accent-light: #FF8C33;
             --accent-dark: #E05E00;
-            --bg-cream: #FFFFFF;
             --bg-white: #FFFFFF;
             --bg-light: #F5F7FA;
             --text-dark: #0F2440;
@@ -38,7 +37,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-cream);
+            background: var(--bg-white);
             color: var(--text-body);
             line-height: 1.7;
             display: flex;
@@ -47,9 +46,8 @@
         /* Sidebar Navigation */
         .sidebar {
             position: fixed;
-            left: 0;
-            top: 0;
-            width: 240px;
+            left: 0; top: 0;
+            width: 260px;
             height: 100vh;
             background: var(--primary);
             color: white;
@@ -83,10 +81,10 @@
         .sidebar nav a {
             display: flex;
             align-items: center;
-            padding: 10px 20px;
+            padding: 9px 20px;
             color: rgba(255,255,255,0.7);
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 400;
             transition: all 0.2s;
             border-left: 3px solid transparent;
@@ -102,8 +100,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 22px;
-            height: 22px;
+            width: 22px; height: 22px;
             border-radius: 50%;
             background: rgba(255,107,0,0.2);
             color: var(--accent);
@@ -115,8 +112,7 @@
 
         .sidebar nav a .nav-dot {
             display: inline-block;
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             border-radius: 50%;
             background: var(--accent);
             margin-right: 12px;
@@ -125,8 +121,8 @@
 
         /* Main Content */
         .main-content {
-            margin-left: 240px;
-            width: calc(100% - 240px);
+            margin-left: 260px;
+            width: calc(100% - 260px);
         }
 
         /* Cover Section */
@@ -145,10 +141,8 @@
         .cover::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 200%;
+            top: -50%; right: -20%;
+            width: 80%; height: 200%;
             background: radial-gradient(ellipse, rgba(255,107,0,0.08) 0%, transparent 70%);
             pointer-events: none;
         }
@@ -156,18 +150,14 @@
         .cover::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             height: 4px;
             background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent));
         }
 
         .cover .confidential-bar {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             background: var(--accent);
             color: white;
             text-align: center;
@@ -194,22 +184,28 @@
 
         .cover h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 10px;
         }
 
-        .cover h1 .highlight {
-            color: var(--accent);
-        }
+        .cover h1 .highlight { color: var(--accent); }
 
         .cover .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 300;
             color: rgba(255,255,255,0.8);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             max-width: 700px;
+        }
+
+        .cover .tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 40px;
         }
 
         .cover .meta-grid {
@@ -240,7 +236,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            margin: 40px 0;
+            margin: 30px 0;
             padding: 30px;
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,107,0,0.2);
@@ -248,9 +244,7 @@
             max-width: 800px;
         }
 
-        .equation-box .eq-part {
-            text-align: center;
-        }
+        .equation-box .eq-part { text-align: center; }
 
         .equation-box .eq-part .eq-name {
             font-family: 'Playfair Display', serif;
@@ -303,9 +297,7 @@
             color: white;
         }
 
-        .section-light {
-            background: var(--bg-light);
-        }
+        .section-light { background: var(--bg-light); }
 
         .section-label {
             font-size: 0.7rem;
@@ -318,16 +310,14 @@
 
         .section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 8px;
             line-height: 1.2;
         }
 
-        .section-dark h2 {
-            color: white;
-        }
+        .section-dark h2 { color: white; }
 
         .section .section-subtitle {
             font-size: 1.05rem;
@@ -336,9 +326,7 @@
             font-style: italic;
         }
 
-        .section-dark .section-subtitle {
-            color: rgba(255,255,255,0.6);
-        }
+        .section-dark .section-subtitle { color: rgba(255,255,255,0.6); }
 
         .section p {
             font-size: 1rem;
@@ -347,85 +335,156 @@
             color: var(--text-body);
         }
 
-        .section-dark p {
-            color: rgba(255,255,255,0.85);
+        .section-dark p { color: rgba(255,255,255,0.85); }
+
+        /* Story Block */
+        .story-block {
+            background: linear-gradient(135deg, #FFF7ED, #FFF1E0);
+            border-left: 5px solid var(--accent);
+            padding: 36px 40px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+
+        .story-block::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px; left: 14px;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .story-block .story-scene {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .story-block p {
+            font-size: 1.02rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .story-block p:last-child { margin-bottom: 0; }
+
+        .story-block-dark {
+            background: rgba(255,107,0,0.08);
+            border-left: 5px solid var(--accent);
+            padding: 36px 40px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+
+        .story-block-dark .story-scene {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .story-block-dark p {
+            font-size: 1.02rem;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+            margin-bottom: 12px;
         }
 
         /* Stat Cards */
         .stat-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            margin: 40px 0;
+            gap: 20px;
+            margin: 30px 0;
         }
 
         .stat-card {
             background: white;
-            border-radius: 8px;
-            padding: 24px;
-            border-left: 4px solid var(--accent);
-            box-shadow: var(--shadow-sm);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
         }
 
         .stat-card .stat-value {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 900;
             color: var(--accent);
+            margin-bottom: 6px;
         }
 
         .stat-card .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
         }
 
         .stat-card .stat-detail {
-            font-size: 0.82rem;
-            color: var(--text-light);
-            margin-top: 8px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
         }
 
-        /* Dark stat cards */
         .stat-card-dark {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
-            border-left: 4px solid var(--accent);
-            border-radius: 8px;
-            padding: 24px;
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
         }
 
         .stat-card-dark .stat-value {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 900;
             color: var(--accent);
+            margin-bottom: 6px;
         }
 
         .stat-card-dark .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
+            color: white;
+            margin-bottom: 6px;
         }
 
-        /* Comparison Cards */
+        .stat-card-dark .stat-detail {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Comparison Grid */
         .comparison-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 40px 0;
+            gap: 24px;
+            margin: 30px 0;
         }
 
         .comparison-card {
             border-radius: 12px;
-            padding: 36px;
-            position: relative;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
         }
 
         .comparison-card.before {
@@ -443,27 +502,27 @@
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-weight: 700;
             letter-spacing: 1px;
+            text-transform: uppercase;
             margin-bottom: 16px;
         }
 
         .comparison-card.before .card-badge {
             background: #FEE2E2;
-            color: #DC2626;
+            color: var(--danger);
         }
 
         .comparison-card.after .card-badge {
-            background: #DCFCE7;
-            color: #16A34A;
+            background: #D1FAE5;
+            color: var(--success);
         }
 
         .comparison-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 16px;
+            font-size: 1.1rem;
             color: var(--text-dark);
+            margin-bottom: 14px;
         }
 
         .comparison-card ul {
@@ -471,34 +530,30 @@
             padding: 0;
         }
 
-        .comparison-card ul li {
-            padding: 8px 0;
+        .comparison-card li {
             font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
             color: var(--text-body);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .comparison-card ul li:last-child {
-            border-bottom: none;
-        }
-
-        /* Flow Diagram */
+        /* Flow Container */
         .flow-container {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 12px;
-            margin: 50px 0;
+            margin: 30px 0;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .flow-step {
             background: white;
             border: 2px solid var(--border);
             border-radius: 12px;
-            padding: 20px 24px;
+            padding: 20px;
             text-align: center;
-            min-width: 160px;
+            min-width: 140px;
             transition: all 0.3s;
             box-shadow: var(--shadow-sm);
         }
@@ -513,8 +568,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 32px; height: 32px;
             border-radius: 50%;
             background: var(--accent);
             color: white;
@@ -523,20 +577,15 @@
             margin-bottom: 10px;
         }
 
-        .flow-step .step-icon {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-
         .flow-step .step-title {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             color: var(--text-dark);
             margin-bottom: 4px;
         }
 
         .flow-step .step-desc {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: var(--text-muted);
         }
 
@@ -552,9 +601,7 @@
         }
 
         .flow-step.highlight-step .step-title,
-        .flow-step.highlight-step .step-desc {
-            color: white;
-        }
+        .flow-step.highlight-step .step-desc { color: white; }
 
         /* Quote Block */
         .quote-block {
@@ -599,6 +646,259 @@
             font-style: normal;
         }
 
+        /* DFY Order Form */
+        .order-form {
+            background: white;
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .order-form h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .order-form .form-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .order-form .form-field {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 18px;
+        }
+
+        .order-form .form-field label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .order-form .form-field span {
+            font-size: 0.92rem;
+            color: var(--text-body);
+        }
+
+        .order-form .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .order-form .form-timer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #FFF7ED, #FFF1E0);
+            border-radius: 8px;
+        }
+
+        .order-form .form-timer .timer-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        .order-form .form-timer .timer-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Service Card Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .service-card .service-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .service-card .service-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(255,107,0,0.1);
+            color: var(--accent);
+        }
+
+        /* Hey True360 Phone Mockup */
+        .phone-mockup {
+            max-width: 380px;
+            margin: 30px auto;
+            background: #1a1a1a;
+            border-radius: 36px;
+            padding: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .phone-screen {
+            background: var(--primary);
+            border-radius: 28px;
+            padding: 30px 20px;
+            min-height: 400px;
+        }
+
+        .phone-screen .phone-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .phone-screen .phone-header .t360-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--accent);
+            letter-spacing: 3px;
+        }
+
+        .phone-screen .phone-header .listening {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+        }
+
+        .phone-bubble {
+            padding: 14px 18px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .phone-bubble.user-bubble {
+            background: rgba(255,107,0,0.2);
+            color: white;
+            margin-left: 30px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .phone-bubble.agent-bubble {
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+            margin-right: 30px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .phone-bubble .bubble-cite {
+            font-size: 0.7rem;
+            color: var(--accent);
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        /* Scenario Box */
+        .scenario-box {
+            background: white;
+            border-radius: 12px;
+            padding: 36px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .scenario-box .scenario-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .scenario-box .scenario-icon { font-size: 1.5rem; }
+
+        .scenario-box .scenario-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .scenario-box .chat-bubble {
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .chat-bubble.user {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            margin-left: 40px;
+        }
+
+        .chat-bubble.agent-limited {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            margin-right: 40px;
+        }
+
+        .chat-bubble.agent-full {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+            margin-right: 40px;
+        }
+
+        .chat-bubble .bubble-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .chat-bubble.user .bubble-label { color: var(--info); }
+        .chat-bubble.agent-limited .bubble-label { color: var(--danger); }
+        .chat-bubble.agent-full .bubble-label { color: var(--success); }
+
         /* Timeline */
         .timeline {
             position: relative;
@@ -609,9 +909,7 @@
         .timeline::before {
             content: '';
             position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
+            left: 15px; top: 0; bottom: 0;
             width: 2px;
             background: var(--accent);
         }
@@ -629,10 +927,8 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -33px;
-            top: 24px;
-            width: 14px;
-            height: 14px;
+            left: -33px; top: 24px;
+            width: 14px; height: 14px;
             border-radius: 50%;
             background: var(--accent);
             border: 3px solid white;
@@ -685,8 +981,39 @@
             font-size: 0.92rem;
         }
 
-        .category-table tr:nth-child(even) {
-            background: var(--bg-light);
+        .category-table tr:nth-child(even) { background: var(--bg-light); }
+
+        /* Moat Shield */
+        .moat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .moat-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .moat-card .moat-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .moat-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .moat-card p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0;
         }
 
         /* Citation Links */
@@ -698,18 +1025,10 @@
             vertical-align: super;
         }
 
-        a.citation:hover {
-            text-decoration: underline;
-        }
+        a.citation:hover { text-decoration: underline; }
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
         /* Author Section */
         .author-section {
@@ -724,8 +1043,7 @@
         }
 
         .author-photo {
-            width: 120px;
-            height: 120px;
+            width: 120px; height: 120px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent);
@@ -750,71 +1068,6 @@
             color: rgba(255,255,255,0.7);
         }
 
-        /* Scenario Box */
-        .scenario-box {
-            background: white;
-            border-radius: 12px;
-            padding: 36px;
-            margin: 30px 0;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border);
-        }
-
-        .scenario-box .scenario-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .scenario-box .scenario-icon {
-            font-size: 1.5rem;
-        }
-
-        .scenario-box .scenario-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            color: var(--text-dark);
-        }
-
-        .scenario-box .chat-bubble {
-            padding: 16px 20px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            font-size: 0.92rem;
-            line-height: 1.6;
-        }
-
-        .chat-bubble.user {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            margin-left: 40px;
-        }
-
-        .chat-bubble.agent-limited {
-            background: #FEF2F2;
-            border: 1px solid #FECACA;
-            margin-right: 40px;
-        }
-
-        .chat-bubble.agent-full {
-            background: #F0FDF4;
-            border: 1px solid #BBF7D0;
-            margin-right: 40px;
-        }
-
-        .chat-bubble .bubble-label {
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .chat-bubble.user .bubble-label { color: var(--info); }
-        .chat-bubble.agent-limited .bubble-label { color: var(--danger); }
-        .chat-bubble.agent-full .bubble-label { color: var(--success); }
-
         /* Thank You Section */
         .thank-you {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -836,7 +1089,7 @@
             margin: 0 auto 20px;
         }
 
-        /* Sources Section */
+        /* Sources */
         .sources-list {
             columns: 2;
             column-gap: 40px;
@@ -852,8 +1105,7 @@
 
         .source-item .source-num {
             display: inline-block;
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             border-radius: 50%;
             background: var(--accent);
             color: white;
@@ -862,6 +1114,329 @@
             font-size: 0.7rem;
             font-weight: 600;
             margin-right: 8px;
+        }
+
+        /* Hamster Wheel Visual */
+        .hamster-visual {
+            text-align: center;
+            margin: 30px 0;
+            padding: 40px;
+            background: #FEF2F2;
+            border-radius: 16px;
+            border: 2px dashed #FECACA;
+        }
+
+        .hamster-visual .hamster-emoji {
+            font-size: 4rem;
+            margin-bottom: 12px;
+        }
+
+        .hamster-visual .hamster-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--danger);
+            margin-bottom: 8px;
+        }
+
+        .hamster-visual .hamster-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* DFY Badge */
+        .dfy-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        /* Story block dark variant */
+        .story-block-dark {
+            background: rgba(255,255,255,0.05);
+            border-left: 4px solid var(--accent);
+            padding: 30px;
+            border-radius: 0 12px 12px 0;
+            margin: 30px 0;
+        }
+        .story-block-dark p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        .story-block-dark .story-scene {
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Phone mockup */
+        .phone-mockup {
+            max-width: 420px;
+            margin: 40px auto;
+            background: #1a1a2e;
+            border-radius: 36px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border: 3px solid rgba(255,255,255,0.1);
+        }
+        .phone-screen {
+            background: var(--primary);
+            border-radius: 28px;
+            padding: 25px 18px;
+            min-height: 350px;
+        }
+        .phone-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .t360-logo {
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        .listening {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .phone-bubble {
+            padding: 12px 16px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .user-bubble {
+            background: var(--accent);
+            color: white;
+            margin-left: 40px;
+            border-bottom-right-radius: 4px;
+            font-style: italic;
+        }
+        .agent-bubble {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.9);
+            margin-right: 40px;
+            border-bottom-left-radius: 4px;
+        }
+        .bubble-cite {
+            color: var(--accent);
+            font-size: 0.7rem;
+            margin-top: 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Scenario box */
+        .scenario-box {
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .scenario-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .scenario-icon {
+            font-size: 1.5rem;
+        }
+        .scenario-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .chat-bubble {
+            padding: 15px 20px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .chat-bubble.user {
+            background: var(--accent);
+            color: white;
+            margin-left: 60px;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-bubble.agent-full {
+            background: var(--primary);
+            color: rgba(255,255,255,0.9);
+            margin-right: 60px;
+            border-bottom-left-radius: 4px;
+        }
+        .chat-bubble .bubble-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        /* Service grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .service-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent);
+        }
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .service-card h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .service-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .service-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-top: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Comparison cards */
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        @media (max-width: 900px) {
+            .comparison-container { grid-template-columns: 1fr; }
+        }
+        .comparison-card {
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+        }
+        .comparison-card.before {
+            background: #fef2f2;
+            border: 2px solid #fca5a5;
+        }
+        .comparison-card.after {
+            background: #f0fdf4;
+            border: 2px solid #86efac;
+        }
+        .comparison-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+        .comparison-card.before .comparison-header {
+            background: #ef4444;
+            color: white;
+        }
+        .comparison-card.after .comparison-header {
+            background: #10b981;
+            color: white;
+        }
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        .timeline-item .time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 65px;
+            padding-top: 2px;
+        }
+        .timeline-item .event {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-body);
+        }
+
+        /* Stat row */
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        @media (max-width: 900px) {
+            .stat-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        .stat-card {
+            background: white;
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* Source items */
+        .source-item {
+            font-size: 0.88rem;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .source-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .source-item a:hover {
+            text-decoration: underline;
         }
 
         @media print {
@@ -877,19 +1452,21 @@
 <aside class="sidebar">
     <div class="sidebar-brand">
         <h3>True360</h3>
-        <div class="codename">BPR + VAST AI OS</div>
+        <div class="codename">Built by Sales, for Sales</div>
     </div>
     <nav>
         <a href="#cover"><span class="nav-dot"></span> Cover</a>
-        <a href="#problem"><span class="nav-num">1</span> The Blind Spot</a>
+        <a href="#parking-lot"><span class="nav-num">1</span> The Parking Lot</a>
         <a href="#vision"><span class="nav-num">2</span> The True360 Vision</a>
-        <a href="#bpr"><span class="nav-num">3</span> How BPR Works</a>
-        <a href="#vast-agent"><span class="nav-num">4</span> VAST Sales Assistant</a>
-        <a href="#integration"><span class="nav-num">5</span> The Integration</a>
-        <a href="#day-in-life"><span class="nav-num">6</span> A Day in the Life</a>
-        <a href="#never-done"><span class="nav-num">7</span> Why Never Done Before</a>
-        <a href="#opportunity"><span class="nav-num">8</span> Business Opportunity</a>
-        <a href="#next-steps"><span class="nav-num">9</span> Proposed Next Steps</a>
+        <a href="#dfy"><span class="nav-num">3</span> Done For You</a>
+        <a href="#hey-true360"><span class="nav-num">4</span> "Hey True360"</a>
+        <a href="#land-expand"><span class="nav-num">5</span> Land &amp; Expand</a>
+        <a href="#services"><span class="nav-num">6</span> The Full Arsenal</a>
+        <a href="#how-it-works"><span class="nav-num">7</span> Under the Hood</a>
+        <a href="#moat"><span class="nav-num">8</span> The Moat</a>
+        <a href="#day-in-life"><span class="nav-num">9</span> A Day in the Life</a>
+        <a href="#opportunity"><span class="nav-num">10</span> The Opportunity</a>
+        <a href="#next-steps"><span class="nav-num">11</span> Next Steps</a>
         <a href="#sources"><span class="nav-dot"></span> Sources</a>
         <a href="#closing"><span class="nav-dot"></span> Closing</a>
     </nav>
@@ -904,9 +1481,11 @@
 
         <div class="codename-badge">Codename: True360</div>
 
-        <h1>The First External<br>Intelligence Layer for<br><span class="highlight">Enterprise AI Sales</span></h1>
+        <h1>Built by Sales.<br>For Sales.<br><span class="highlight">Done for You.</span></h1>
 
-        <p class="subtitle">How BestPaidRep.com's AI-powered opportunity intelligence completes the VAST Sales Assistant Agent — creating the industry's first true 360-degree customer view.</p>
+        <p class="tagline">"Hey True360" &mdash; The moment everything changes.</p>
+
+        <p class="subtitle">How BestPaidRep.com's AI-powered opportunity intelligence completes the VAST Sales Assistant Agent &mdash; creating the industry's first true 360-degree customer view. No SA required. No research. No hamster wheel. Just intelligence, delivered.</p>
 
         <div class="equation-box">
             <div class="eq-part">
@@ -945,15 +1524,21 @@
         </div>
     </section>
 
-    <!-- Section 1: The Problem -->
-    <section id="problem" class="section">
+    <!-- Section 1: The Parking Lot -->
+    <section id="parking-lot" class="section">
         <div class="section-label">Section 1</div>
-        <h2>The Blind Spot in Enterprise Sales Intelligence</h2>
-        <p class="section-subtitle">Every CRM in the world has the same fundamental limitation.</p>
+        <h2>The Parking Lot</h2>
+        <p class="section-subtitle">Every enterprise rep knows this moment. It's 7:47 AM and the meeting is at 8:00.</p>
 
-        <p>Enterprise sales has a data problem — but not the one most people think. The problem is not a lack of data. Salesforce alone captures millions of data points across contacts, opportunities, activities, emails, and call logs. The problem is that <strong>every piece of data in a CRM is internally generated</strong>. It reflects what your organization knows, what your reps have entered, and what your systems have recorded. It is, by definition, an inside-out view of the customer.<a href="https://www.salesforce.com/crm/" class="citation" target="_blank">[1]</a></p>
+        <div class="story-block">
+            <div class="story-scene">Scene: A parking garage. Tuesday morning. 7:47 AM.</div>
+            <p>Sarah pulls into the parking garage at Expedia's Seattle campus. She's a VAST Data enterprise rep. The meeting is in thirteen minutes. She's meeting with Rajesh Naidu, SVP &amp; Chief Architect &mdash; a man who oversees 70+ petabytes of data and is consolidating 21 legacy platform stacks into one unified architecture.</p>
+            <p>Sarah knows none of this.</p>
+            <p>What Sarah knows is what's in Salesforce: a contact record, a phone number, a note from the BDR that says "interested in storage solutions," and a last-touch date from three weeks ago. She spent twenty minutes last night Googling "Expedia data infrastructure" and found a two-year-old blog post. She has no idea what Rajesh's actual pain points are, who else influences the decision, or that Expedia just deployed 1,500 AI agents and is drowning in data gravity.</p>
+            <p>Sarah is smart. Sarah is experienced. Sarah is about to walk into a knife fight with a butter knife.</p>
+        </div>
 
-        <p>What no CRM captures — and what no AI sales agent can reason about today — is the <strong>external reality</strong> of the customer. What are their actual technology pain points? What did their CTO say in last month's earnings call? What does their job posting for a "Senior Data Platform Engineer" reveal about their infrastructure gaps? What are their employees saying on Glassdoor about technical debt? What competitive pressures are reshaping their strategy?</p>
+        <p>This is not Sarah's fault. This is the system's fault. Enterprise sales has been running on the same broken model for decades: the CRM holds internal data, the rep is expected to do their own research, and the "360-degree customer view" that every CRM vendor promises has always been a marketing lie. It's a 180-degree view at best &mdash; and it only shows what <em>your company</em> knows, not what the <em>world</em> knows.<a href="https://www.salesforce.com/crm/" class="citation" target="_blank">[1]</a></p>
 
         <div class="stat-row">
             <div class="stat-card">
@@ -967,118 +1552,394 @@
                 <div class="stat-detail">Zero structured external intelligence exists in any CRM today</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">360&deg;?</div>
-                <div class="stat-label">The Broken Promise</div>
-                <div class="stat-detail">"360-degree view" has been a marketing claim, never a reality</div>
+                <div class="stat-value">13 min</div>
+                <div class="stat-label">Until the Meeting</div>
+                <div class="stat-detail">Not enough time to research. Always enough time to wing it.</div>
             </div>
         </div>
 
-        <p>Traditional data providers like ZoomInfo, Apollo, and Lusha provide <strong>contact data</strong> — names, titles, phone numbers, org charts. That is valuable for prospecting, but it is not intelligence. It tells you <em>who</em> to call, but nothing about <em>what to say when they answer</em>. No provider today delivers structured, AI-researched, citation-rich intelligence about a customer's technology landscape, strategic priorities, validated pain points, and competitive pressures — formatted and ready for an AI agent to reason across.<a href="https://www.zoominfo.com/" class="citation" target="_blank">[3]</a></p>
+        <p>Now here's where it gets worse. The VAST engineering team &mdash; brilliant people, world-class infrastructure builders &mdash; watched this problem and said: "We'll build a Sales Assistant Agent. It'll sit on top of the CRM, use RAG to reason across internal data, and give the rep answers in natural language." And they did. And it's impressive.<a href="https://www.vastdata.com/resources/demos/the-vast-ai-os-demo-and-walkthrough" class="citation" target="_blank">[4]</a></p>
 
-        <div class="quote-block">
-            <p>"The best sales reps don't just know their product — they know their customer's business better than the customer knows it themselves. The problem is, that level of knowledge takes weeks of manual research. Until now."</p>
-            <div class="quote-source">— JB, Founder, BestPaidRep.com</div>
+        <p>But here's what the engineer didn't think about &mdash; because he's never carried a bag:</p>
+
+        <div class="hamster-visual">
+            <div class="hamster-emoji">&#x1F439; &#x1F3A1;</div>
+            <div class="hamster-text">The Hamster Wheel Problem</div>
+            <div class="hamster-desc">The Sales Assistant Agent is a tool. And tools create work. The moment you hand an enterprise rep a new tool &mdash; no matter how elegant &mdash; the first thing they're going to do is walk down the hall, find the nearest Solutions Architect, and say: <strong>"Hey, can you figure this out for me?"</strong> Now you've added another person to the wheel. The ER and the SA are both spinning &mdash; and the hamster is running faster than ever.</div>
         </div>
 
-        <p>VAST Data's Sales Assistant Agent has already solved half of this equation. It can reason across internal CRM data, email threads, call transcripts, and meeting notes with extraordinary speed and accuracy. But even the most powerful AI agent can only reason about the data it has access to. <strong>The external half of the customer view — the half that transforms a sales call from transactional to consultative — has been missing. Until now.</strong></p>
+        <p>The engineer sees a powerful AI agent. The rep sees another thing they have to learn, another interface to navigate, another conversation with the SA about how to use it. The engineer's demo looks great on stage. But in the parking garage at 7:47 AM, Sarah isn't opening a RAG tool. She's opening her email to see if the BDR left any notes.</p>
+
+        <div class="quote-block">
+            <p>"I spent 30 years watching brilliant sales reps walk into meetings unprepared &mdash; not because they were lazy, but because the research took too long and the tools created more work than they saved. The answer was never a better tool. The answer was to do it for them."</p>
+            <div class="quote-source">&mdash; JB, Founder, BestPaidRep.com</div>
+        </div>
+
+        <p><strong>What if Sarah didn't have to do anything?</strong> What if the intelligence was already there &mdash; already researched, already structured, already loaded into the system, already waiting for her? What if all she had to do was pull out her phone and say two words?</p>
+
+        <p style="text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; color: var(--accent); margin: 30px 0; letter-spacing: 2px;">"Hey True360"</p>
     </section>
 
-    <!-- Section 2: The Vision -->
+    <!-- Section 2: The True360 Vision -->
     <section id="vision" class="section section-dark">
         <div class="section-label">Section 2</div>
         <h2>The True360 Vision</h2>
-        <p class="section-subtitle">What if your AI sales agent could reason across everything — internal and external?</p>
+        <p class="section-subtitle">What if your AI sales agent could reason across everything &mdash; internal and external &mdash; and the rep never had to lift a finger?</p>
+
+        <div class="story-block-dark">
+            <div class="story-scene">Scene: Same parking garage. Same Tuesday. But six months from now.</div>
+            <p>Sarah pulls into the parking garage at Expedia's Seattle campus. The meeting is in thirteen minutes. But this time, something is different. Last Thursday, her manager ordered an Opportunity Intelligence Report on Expedia from BestPaidRep.com. It took him 10 minutes. He filled in Sarah's name, the account name, his email, and a short paragraph: "Sarah is meeting with Rajesh Naidu, SVP &amp; Chief Architect. First face-to-face. Exploring data infrastructure modernization."</p>
+            <p>That was it. Done. White glove. No SA involved. No research. No hamster wheel.</p>
+            <p>By Friday afternoon, a comprehensive, 10-chapter intelligence book on Expedia was automatically ingested into the VAST Sales Assistant Agent. Sarah didn't even know it happened. She just pulls out her phone.</p>
+            <p>"Hey True360 &mdash; what should I know about Rajesh Naidu and Expedia's data infrastructure before this meeting?"</p>
+        </div>
 
         <p>True360 is a simple but powerful concept: <strong>combine VAST Data's Sales Assistant Agent (internal intelligence) with BestPaidRep.com's Opportunity Intelligence Reports (external intelligence) to create the industry's first complete, AI-powered 360-degree customer view.</strong></p>
 
-        <p>Today, the VAST Sales Assistant Agent is already a breakthrough. Built on the VAST AI Operating System, it can ingest CRM records, parse email threads, summarize call transcripts, and generate meeting briefings in seconds. It is a "thinking machine" for revenue teams — and it is built on the most advanced AI data infrastructure in the world.<a href="https://www.vastdata.com/resources/demos/the-vast-ai-os-demo-and-walkthrough" class="citation" target="_blank">[4]</a></p>
+        <p>But here's what makes True360 different from every other "AI for sales" pitch: <strong>the rep does nothing.</strong> The intelligence is ordered by a manager or triggered by a workflow. It's researched, assembled, cited, and delivered by BestPaidRep.com. It's automatically ingested into the VAST AI OS. And it's queryable through the Sales Assistant Agent in natural language. The rep's only job is to show up and be brilliant.</p>
 
-        <p>But imagine what happens when that same agent also has access to a comprehensive, multi-chapter intelligence report on the target account — one that includes financial analysis from SEC filings, executive profiles with decision-making patterns, validated technology pain points from employee reviews and job postings, competitive landscape analysis, and a strategic engagement roadmap. Imagine the agent can cite its sources, cross-reference internal CRM notes with external research, and generate briefings that no competitor's rep could possibly match.</p>
-
-        <div class="quote-block-dark">
-            <p>"True360 is not an incremental improvement. It is a new category. No one has ever built a structured, AI-researched, RAG-ready external intelligence layer for enterprise sales agents. This is the missing piece."</p>
-            <div class="quote-source">— JB, Founder, BestPaidRep.com</div>
+        <div class="stat-row">
+            <div class="stat-card-dark">
+                <div class="stat-value">DFY</div>
+                <div class="stat-label">Done For You</div>
+                <div class="stat-detail">White glove delivery. No SA required. No research. No training.</div>
+            </div>
+            <div class="stat-card-dark">
+                <div class="stat-value">10 min</div>
+                <div class="stat-label">To Order</div>
+                <div class="stat-detail">Name, Account, Email, Meeting Context. That's it.</div>
+            </div>
+            <div class="stat-card-dark">
+                <div class="stat-value">Auto</div>
+                <div class="stat-label">Ingest to VAST OS</div>
+                <div class="stat-detail">Event trigger fires. Report lands in Vector DB. Agent enriched.</div>
+            </div>
         </div>
 
-        <p>That is True360. It is not a dashboard. It is not a report viewer. It is an <strong>intelligence layer</strong> that lives natively inside the VAST AI OS, enriching every query the Sales Assistant Agent processes with deep, cited, externally-sourced customer intelligence. The result is an AI agent that doesn't just know what your CRM says about a customer — it knows what the <em>world</em> says about them.</p>
+        <div class="quote-block-dark">
+            <p>"True360 is not a tool. It's a service. Tools create work. Services eliminate it. That's the difference between something an engineer builds and something a 30-year sales veteran designs."</p>
+            <div class="quote-source">&mdash; JB, Founder, BestPaidRep.com</div>
+        </div>
     </section>
 
-    <!-- Section 3: How BestPaidRep.com Works -->
-    <section id="bpr" class="section">
+    <!-- Section 3: Done For You -->
+    <section id="dfy" class="section">
         <div class="section-label">Section 3</div>
-        <h2>How BestPaidRep.com Works</h2>
-        <p class="section-subtitle">AI-native intelligence, built on 30+ years of enterprise sales domain expertise.</p>
+        <h2>Done For You, White Glove</h2>
+        <p class="section-subtitle">The rep never touches the machinery. That's not a feature. That's the entire point.</p>
 
-        <p>BestPaidRep.com is an AI-native company founded by JB (John Kilakowske), a 30+ year veteran of enterprise sales. The company produces comprehensive <strong>Opportunity Intelligence Reports</strong> — deep, multi-chapter research documents that give enterprise sales teams the kind of actionable intelligence that used to take weeks of manual research, delivered in hours.</p>
+        <div class="story-block">
+            <div class="story-scene">Scene: A sales manager's desk. 3:15 PM on a Wednesday.</div>
+            <p>Mike is a front-line sales manager at VAST Data. He just got off a pipeline call. Sarah has a meeting with Expedia next Tuesday &mdash; first face-to-face with the SVP of Architecture. Mike knows this meeting matters. In the old world, he'd tell Sarah to "do her homework" and hope for the best. Maybe she'd spend a few hours Googling. Maybe she'd ask the SA to pull some data. Maybe she'd wing it.</p>
+            <p>Instead, Mike opens BestPaidRep.com. He fills in four fields and a short paragraph. He clicks submit. Total time: 10 minutes. He goes back to his pipeline.</p>
+            <p>By Friday, a 10-chapter intelligence book on Expedia &mdash; complete with financial analysis, executive profiles with real headshots, validated pain points from Glassdoor and job postings, competitive landscape, and a strategic engagement roadmap &mdash; has been automatically ingested into the VAST Sales Assistant Agent. Sarah doesn't even know it happened until she asks True360 a question and gets an answer that makes her sound like she's been studying Expedia for a month.</p>
+        </div>
 
-        <p>Each report is assembled using AI-powered research tools guided by deep domain expertise. The AI conducts the research; the enterprise sales veteran defines the questions, the analysis framework, and the strategic interpretation. Every significant claim is linked to its source with clickable citations, ensuring full transparency and verifiability.</p>
+        <p>This is the <strong>DFY (Done For You) white-glove model</strong>, and it is the single most important design decision in the entire True360 architecture. It is the reason this will work when every other "AI for sales" tool has failed to achieve adoption.</p>
+
+        <p>Here's why: enterprise reps don't fail because they lack tools. They fail because they lack time. They have 15 accounts, 30 contacts, 8 meetings this week, a forecast due Friday, and a quota that doesn't care about their learning curve. Every new tool &mdash; no matter how powerful &mdash; is a tax on their time. And the first thing a taxed rep does is find someone else to pay it.<a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" class="citation" target="_blank">[2]</a></p>
+
+        <div class="order-form">
+            <h4>&#x1F4CB; BestPaidRep.com &mdash; Opportunity Intelligence Order</h4>
+            <div class="form-fields">
+                <div class="form-field">
+                    <label>Enterprise Rep Name</label>
+                    <span>Sarah Mitchell</span>
+                </div>
+                <div class="form-field">
+                    <label>Account Name</label>
+                    <span>Expedia Group, Inc.</span>
+                </div>
+                <div class="form-field">
+                    <label>Rep Email</label>
+                    <span>s.mitchell@vastdata.com</span>
+                </div>
+                <div class="form-field">
+                    <label>Order Type</label>
+                    <span>New Account &mdash; Greenfield</span>
+                </div>
+                <div class="form-field full-width">
+                    <label>Meeting Context</label>
+                    <span>First face-to-face with Rajesh Naidu, SVP &amp; Chief Architect. Exploring data infrastructure modernization. Expedia is consolidating legacy platforms and scaling AI workloads. Want to understand their pain points and position VAST as the unified data platform.</span>
+                </div>
+            </div>
+            <div class="form-timer">
+                <div class="timer-value">10&ndash;15 minutes</div>
+                <div class="timer-label">Total time investment. That's it. We handle everything else.</div>
+            </div>
+        </div>
+
+        <p>What happens next is entirely automated:</p>
+
+        <div class="flow-container">
+            <div class="flow-step highlight-step">
+                <div class="step-num">1</div>
+                <div class="step-title">Order Placed</div>
+                <div class="step-desc">Manager fills 4 fields + context</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step">
+                <div class="step-num">2</div>
+                <div class="step-title">BPR Researches</div>
+                <div class="step-desc">AI + domain expertise builds report</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div class="step-title">Report Delivered</div>
+                <div class="step-desc">10-chapter intelligence book</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div class="step-title">Event Trigger Fires</div>
+                <div class="step-desc">Auto-ingest to VAST OS</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step">
+                <div class="step-num">5</div>
+                <div class="step-title">Vector DB Enriched</div>
+                <div class="step-desc">Chunked, embedded, indexed</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step highlight-step">
+                <div class="step-num">6</div>
+                <div class="step-title">"Hey True360"</div>
+                <div class="step-desc">Rep asks. Agent answers. Done.</div>
+            </div>
+        </div>
+
+        <p><strong>No Solutions Architect involved.</strong> No training session. No "how do I use this tool" Slack message. No hamster wheel. The manager orders the intelligence like ordering a steak &mdash; medium rare, for table 7. BestPaidRep.com cooks it, plates it, and delivers it to the table. The rep just eats.</p>
+
+        <div class="dfy-badge">DFY &mdash; Done For You &mdash; White Glove</div>
+    </section>
+
+
+    <!-- Section 4: Hey True360 -->
+    <section id="hey-true360" class="section section-dark">
+        <div class="section-label">Section 4</div>
+        <h2>"Hey True360"</h2>
+        <p class="section-subtitle">The moment that changes everything &mdash; and the moment the client knows you're different.</p>
+
+        <div class="story-block-dark">
+            <div class="story-scene">Scene: A conference room at Expedia HQ. 10:22 AM. The meeting is going well.</div>
+            <p>Sarah is sitting across from Rajesh Naidu. The conversation has been excellent &mdash; she opened with insights about Expedia's data mesh migration that made Rajesh lean forward. She referenced the 21 legacy platform stacks being consolidated. She knew about the AI Playground with 60+ LLMs. Rajesh is impressed. He wasn't expecting this level of preparation from a storage vendor.</p>
+            <p>Then Rajesh asks a question Sarah doesn't know the answer to: "How many petabytes of our data is VAST currently managing across our test environments?"</p>
+            <p>In the old world, Sarah would say: "Great question &mdash; let me get back to you on that." Translation: I have no idea, and I'm going to bother my SA for the next 48 hours trying to find out. The momentum dies. The meeting ends politely. The follow-up email gets lost in Rajesh's inbox.</p>
+            <p>But Sarah doesn't say that. She picks up her phone.</p>
+            <p>"Hey True360 &mdash; what is VAST's current data footprint with Expedia across all environments?"</p>
+            <p>Three seconds later: "Based on CRM records and the latest infrastructure assessment, VAST is currently managing 4.2 PB across Expedia's three test environments, with a production pilot of 12 PB scheduled for Q2. The primary contact for the production pilot is David Chen, Senior Director of Cloud Infrastructure, who reports to Rajesh Naidu. [Sources: CRM Note #4421, BPR Report Ch.3, Internal Assessment Doc]"</p>
+            <p>Rajesh's eyes widen. Not because of the number &mdash; because Sarah <strong>knows his business</strong>. She knows his team. She knows the timeline. She knows things that aren't on any website or in any press release.</p>
+            <p>"That's... very impressive," Rajesh says. "Let me introduce you to David. Let's set up a lunch to discuss the production timeline."</p>
+            <p>The deal just moved from discovery to engagement. In three seconds. Because of two words: "Hey True360."</p>
+        </div>
+
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <div class="phone-header">
+                    <div class="t360-logo">TRUE360</div>
+                    <div class="listening">Listening...</div>
+                </div>
+                <div class="phone-bubble user-bubble">
+                    "Hey True360 &mdash; what should I know about Rajesh Naidu before this meeting?"
+                </div>
+                <div class="phone-bubble agent-bubble">
+                    <strong>Rajesh Naidu</strong> &mdash; SVP &amp; Chief Architect at Expedia Group. Oversees a 70+ PB data estate. Currently leading the consolidation of 21 legacy platform stacks into a unified architecture. Key priorities: data mesh migration, cross-region access optimization, and egress cost reduction. Reports directly to CTO Ramana Thumu. Your CRM shows a discovery call on 11/15 where Rajesh expressed interest in unified storage.
+                    <div class="bubble-cite">[Sources: BPR Report Ch.2, LinkedIn, CRM Note #4421]</div>
+                </div>
+                <div class="phone-bubble user-bubble">
+                    "Who else should I be talking to?"
+                </div>
+                <div class="phone-bubble agent-bubble">
+                    Key influencers: <strong>Ramana Thumu</strong> (CTO, drives unified platform strategy), <strong>Scott Schenkel</strong> (CFO, focused on cost optimization including egress), and <strong>David Chen</strong> (Sr. Dir. Cloud Infra, owns the production pilot). Procurement path goes through Sarah Johnson in Vendor Management.
+                    <div class="bubble-cite">[Sources: BPR Report Ch.2, Expedia Leadership Page, CRM]</div>
+                </div>
+            </div>
+        </div>
+
+        <p>This is the <strong>"Hey True360" moment</strong> &mdash; and it's the reason every customer of VAST, Salesforce, HubSpot, and every other CRM on the planet will want this. It's not just about having better data. It's about having the right data at the right moment, delivered in natural language, with citations, in the middle of a live conversation.</p>
+
+        <p>The client knows immediately that you know their business. You know their org chart. You know their pain points. You know things that aren't on Google. And you didn't spend weeks researching &mdash; because it was all <strong>Done For You</strong>.</p>
+
+        <p>The cool part that the VAST engineer didn't talk about in the demo? <strong>The ability to ask questions to the entire True360 ecosystem in real time.</strong> Not just CRM data. Not just internal notes. Everything &mdash; financial filings, executive profiles, technology assessments, competitive intelligence, employee sentiment, validated pain points &mdash; all queryable, all cited, all instant.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
+
+        <p>Every client of VAST will want this. Every client of Salesforce will want this. Every client of HubSpot will want this. Because every enterprise rep on the planet has been in that parking garage at 7:47 AM, wishing they knew more. True360 makes that wish come true &mdash; and the rep never had to do a thing.</p>
+    </section>
+
+    <!-- Section 5: Land & Expand -->
+    <section id="land-expand" class="section">
+        <div class="section-label">Section 5</div>
+        <h2>Scenario A: Land &amp; Expand</h2>
+        <p class="section-subtitle">Growing existing accounts is where the real money lives. True360 turns it into a science.</p>
+
+        <div class="story-block">
+            <div class="story-scene">Scene: Quarterly pipeline review. A VP of Sales is looking at the installed base.</div>
+            <p>"We have 200 existing customers," the VP says. "How many of them are we growing?" The room goes quiet. Everyone knows the answer: not enough. The reps are so busy chasing new logos that the installed base is being neglected. Competitors are circling. Renewals are at risk. And nobody has a systematic way to identify which accounts are ripe for expansion and which are drifting away.</p>
+            <p>Until now.</p>
+        </div>
+
+        <p>True360's <strong>Land &amp; Expand</strong> capability is where BestPaidRep.com's external intelligence meets VAST's internal CRM data to create something neither could produce alone: a <strong>proactive, data-driven Unsolicited Bid (UB)</strong> for existing customers.</p>
+
+        <p>Here's how it works. The Sales Assistant Agent feeds BestPaidRep.com the internal customer history &mdash; when they became a customer, what the initial order was, what problems it's solving, what the customer's growth rate looks like. BPR layers on fresh external intelligence: What are the customer's current pain points? What's their latest tech strategy? Who's new in the C-suite? Are they evaluating competitors? What does Glassdoor say about their infrastructure team's morale?</p>
+
+        <p>The output is not a report &mdash; it's a <strong>battle plan</strong>:</p>
 
         <table class="category-table">
             <thead>
                 <tr>
-                    <th>Research Channel</th>
-                    <th>Sources</th>
-                    <th>Intelligence Produced</th>
+                    <th>Intelligence Element</th>
+                    <th>Internal Source (VAST CRM)</th>
+                    <th>External Source (BPR)</th>
+                    <th>Action Produced</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Financial Intelligence</strong></td>
-                    <td>SEC filings, 10-K/10-Q, earnings transcripts</td>
-                    <td>Revenue trends, capex priorities, strategic investments</td>
+                    <td><strong>Customer Tenure &amp; History</strong></td>
+                    <td>Original deal date, initial order size</td>
+                    <td>Company growth trajectory, M&amp;A activity</td>
+                    <td>Expansion timing recommendation</td>
                 </tr>
                 <tr>
-                    <td><strong>Executive Profiling</strong></td>
-                    <td>LinkedIn, press interviews, conference talks</td>
-                    <td>Decision-maker profiles, priorities, communication styles</td>
+                    <td><strong>Current Pain Points</strong></td>
+                    <td>Support tickets, feature requests</td>
+                    <td>Glassdoor, Reddit, job postings, earnings calls</td>
+                    <td>Unsolicited Bid (UB) proposal</td>
                 </tr>
                 <tr>
-                    <td><strong>Technology Landscape</strong></td>
-                    <td>Job postings, tech blogs, architecture talks</td>
-                    <td>Current stack, migration plans, infrastructure gaps</td>
+                    <td><strong>Growth Rate</strong></td>
+                    <td>Usage metrics, storage consumption</td>
+                    <td>Revenue growth, capex trends, hiring patterns</td>
+                    <td>Capacity planning proposal</td>
                 </tr>
                 <tr>
-                    <td><strong>Employee Sentiment</strong></td>
-                    <td>Glassdoor, Reddit, Blind, Hacker News</td>
-                    <td>Cultural pain points, tech debt frustrations, morale signals</td>
+                    <td><strong>Competitive Drift</strong></td>
+                    <td>Engagement frequency, response times</td>
+                    <td>Job postings mentioning competitors, vendor announcements</td>
+                    <td>Competitive defense strategy</td>
                 </tr>
                 <tr>
-                    <td><strong>Competitive Analysis</strong></td>
-                    <td>Industry reports, vendor announcements, analyst notes</td>
-                    <td>Competitive pressures, vendor relationships, switching signals</td>
+                    <td><strong>Influence Map</strong></td>
+                    <td>Known contacts, meeting history</td>
+                    <td>New executives, org changes, LinkedIn activity</td>
+                    <td>Stakeholder engagement plan</td>
                 </tr>
                 <tr>
-                    <td><strong>Pain Point Validation</strong></td>
-                    <td>Cross-channel correlation of all sources above</td>
-                    <td>Validated, multi-source pain points with confidence ratings</td>
+                    <td><strong>Report Freshness</strong></td>
+                    <td>Last BPR report date</td>
+                    <td>Latest news, earnings, leadership changes</td>
+                    <td>Refresh trigger: Yes/No</td>
                 </tr>
             </tbody>
         </table>
 
-        <p>The output is not a slide deck or a bullet list. It is a <strong>structured, citation-rich, multi-chapter intelligence book</strong> — complete with a cover page, executive summary, 10+ content chapters, real executive headshot photos, clickable source citations, and a strategic engagement roadmap. A live example — the Expedia Group Opportunity Intelligence Report — is available at <a href="https://kilakj57.github.io/bestpaidrep-reports/" target="_blank">kilakj57.github.io/bestpaidrep-reports</a>.</p>
-
-        <div class="quote-block">
-            <p>"I built BestPaidRep.com because I spent 30 years watching brilliant sales reps walk into meetings unprepared — not because they were lazy, but because the research took too long. AI changed that equation overnight."</p>
-            <div class="quote-source">— JB, Founder, BestPaidRep.com</div>
+        <div class="scenario-box">
+            <div class="scenario-header">
+                <div class="scenario-icon">&#x1F4E8;</div>
+                <div class="scenario-title">The Unsolicited Bid: How It Works</div>
+            </div>
+            <div class="chat-bubble user">
+                <div class="bubble-label">Rep asks True360</div>
+                "Hey True360 &mdash; what expansion opportunities exist at Acme Corp and who do I need to talk to?"
+            </div>
+            <div class="chat-bubble agent-full">
+                <div class="bubble-label">True360 Response</div>
+                "Acme Corp became a customer 18 months ago with a 2 PB initial order for their analytics workload. Since then, their data estate has grown 340% (per their latest 10-K). They've posted 12 job listings for 'AI/ML Engineer' in the last 90 days, suggesting a major AI initiative. Their CTO spoke at re:Invent about 'breaking free from data silos' &mdash; language that aligns with VAST's unified platform story. <strong>Recommended UB:</strong> A 10 PB expansion proposal targeting their AI workload, positioned around zero-ETL RAG capabilities. <strong>Key contact:</strong> New VP of Data Engineering (hired 6 weeks ago from Snowflake &mdash; likely evaluating alternatives). <strong>Risk:</strong> Three Databricks job postings suggest they may be evaluating a lakehouse approach. <strong>Report last refreshed:</strong> 47 days ago. Recommend refresh. [Sources: BPR Report, CRM, 10-K Filing, LinkedIn, Job Postings]"
+            </div>
         </div>
 
-        <p>Critically, BestPaidRep.com reports are <strong>designed from the ground up to be machine-readable</strong>. The structured HTML format, consistent chapter organization, and embedded metadata make them ideal for ingestion into a RAG pipeline. This is not an afterthought — it is a core design principle. Every report is built to be consumed by both humans and AI agents.</p>
+        <p>The rep didn't research any of this. The manager didn't assign it. The SA didn't build it. <strong>True360 produced it automatically</strong> by combining what VAST already knows (internal) with what BestPaidRep.com discovered (external). The Unsolicited Bid goes into the proposed meeting notes, along with who the ER is meeting with, what steps they need to take, who else needs to be influenced, and whether the customer is headed down a path that needs course correction.</p>
+
+        <p>This is a whole strategy for growing the existing account base &mdash; and the rep's only job is to show up prepared.</p>
     </section>
 
-    <!-- Section 4: VAST Sales Assistant Agent -->
-    <section id="vast-agent" class="section section-light">
-        <div class="section-label">Section 4</div>
-        <h2>The VAST Sales Assistant Agent</h2>
-        <p class="section-subtitle">A thinking machine for revenue teams, built on the world's most advanced AI data infrastructure.</p>
+    <!-- Section 6: The Full Arsenal -->
+    <section id="services" class="section section-light">
+        <div class="section-label">Section 6</div>
+        <h2>The Full Arsenal</h2>
+        <p class="section-subtitle">Opportunity Intelligence is just the beginning. Here's everything BestPaidRep.com can deliver &mdash; all DFY, all auto-ingested into VAST OS.</p>
 
-        <p>The VAST Sales Assistant Agent is an agentic AI application built on the VAST AI Operating System (AI OS). It serves as a "thinking machine" for revenue teams, automating the labor-intensive process of prospect research, account summarization, and meeting preparation by reasoning across an organization's entire data estate.<a href="https://www.vastdata.com/resources/demos/the-vast-ai-os-demo-and-walkthrough" class="citation" target="_blank">[4]</a></p>
+        <div class="story-block">
+            <div class="story-scene">Scene: A VAST rep on a 6 AM flight to Chicago. Two hours of dead time.</div>
+            <p>Marcus has a meeting at 10 AM with a Fortune 500 prospect. He could review the 10-chapter Opportunity Intelligence Report on his laptop. But he's in a middle seat and his laptop is in the overhead bin. So he puts in his AirPods and opens the BestPaidRep.com podcast &mdash; a 20-minute audio briefing on everything he needs to know about the account, narrated and produced automatically from the same intelligence that lives in True360.</p>
+            <p>By the time the plane lands, Marcus knows the CTO's priorities, the three biggest pain points, the competitive landscape, and exactly what to say in the first five minutes. He never opened a laptop. He never read a document. He just listened.</p>
+        </div>
 
-        <p>The agent is built on a unified "Data-to-AI" stack that ensures real-time access to both structured and unstructured information. This architecture eliminates the traditional friction of moving data between storage, databases, and AI tools — everything runs natively within the VAST AI OS.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
+        <p>The Opportunity Intelligence Report is the flagship product. But BestPaidRep.com's vision is to deliver intelligence in <strong>every format a sales professional consumes</strong> &mdash; and every format that can be auto-ingested into the VAST AI OS. Here's the full arsenal:</p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">&#x1F4D6;</div>
+                <h4>Opportunity Intelligence Book</h4>
+                <p>The flagship: 10+ chapter, citation-rich, magazine-style HTML report with executive profiles, pain points, competitive landscape, and engagement roadmap.</p>
+                <div class="service-tag">Core Product</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F399;</div>
+                <h4>Audio Briefing / Podcast</h4>
+                <p>20-minute narrated audio summary of the intelligence report. Perfect for car rides, flights, and gym sessions. Powered by NotebookLM-style audio generation.</p>
+                <div class="service-tag">Car &amp; Plane Ready</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F4CA;</div>
+                <h4>Custom Slide Deck</h4>
+                <p>Presentation-ready slides for internal strategy meetings, pipeline reviews, or executive briefings. Auto-generated from the intelligence report.</p>
+                <div class="service-tag">Meeting Ready</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F3AC;</div>
+                <h4>Narrated Video Briefing</h4>
+                <p>Custom slide video with sound &mdash; a visual + audio walkthrough of the account intelligence. Shareable, consumable, impressive.</p>
+                <div class="service-tag">Shareable</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F578;</div>
+                <h4>Knowledge Graph</h4>
+                <p>Visual relationship mapping of the account: org chart, influence networks, technology dependencies, competitive relationships. Interactive and queryable.</p>
+                <div class="service-tag">Visual Intel</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F4C8;</div>
+                <h4>Infographics</h4>
+                <p>Data-rich visual summaries of key account metrics, pain points, and opportunities. Perfect for quick consumption and internal sharing.</p>
+                <div class="service-tag">Quick Consume</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F4CB;</div>
+                <h4>Automated QBR Deck</h4>
+                <p>Quarterly Business Review slide deck showing last quarter's goals vs. actuals, this quarter's commitments, pipeline health, and account intelligence updates. Everything auto-ingested by VAST OS to Salesforce.</p>
+                <div class="service-tag">Management Ready</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#x1F504;</div>
+                <h4>Intelligence Refresh</h4>
+                <p>Automated refresh of existing reports when triggered by time, events (earnings, leadership change), or rep request. Always current. Always relevant.</p>
+                <div class="service-tag">Always Fresh</div>
+            </div>
+        </div>
+
+        <p>Every single one of these deliverables is <strong>designed to be auto-ingested by the VAST AI OS</strong>. The audio gets transcribed and vectorized. The slides get parsed and indexed. The knowledge graph gets stored as structured data. Everything flows into the Sales Assistant Agent's data estate, enriching the True360 ecosystem with every new deliverable.<a href="https://www.vastdata.com/platform/insightengine" class="citation" target="_blank">[6]</a></p>
+
+        <p>And everything &mdash; <em>everything</em> &mdash; is <strong>DFY, white glove</strong>. The rep doesn't create the podcast. The rep doesn't build the slides. The rep doesn't design the infographic. BestPaidRep.com does it all. The rep just consumes the intelligence in whatever format works for them at that moment. Anything <a href="https://notebooklm.google.com" target="_blank">Google NotebookLM</a> can build, we can automate and deliver.<a href="https://notebooklm.google.com" class="citation" target="_blank">[15]</a></p>
+    </section>
+
+    <!-- Section 7: Under the Hood -->
+    <section id="how-it-works" class="section">
+        <div class="section-label">Section 7</div>
+        <h2>Under the Hood</h2>
+        <p class="section-subtitle">For the technical audience: how BPR intelligence flows through the VAST AI OS architecture.</p>
+
+        <div class="story-block">
+            <div class="story-scene">Scene: A VAST engineering meeting. An engineer raises his hand.</div>
+            <p>"I could build that in a weekend," the engineer says. He's looking at the Opportunity Intelligence Report. He sees HTML, some CSS, a few API calls to an LLM. He thinks this is a prompt engineering project. He's wrong &mdash; but we'll get to that in Section 8. For now, let's give him what he wants: the technical architecture.</p>
+        </div>
+
+        <p>The VAST Sales Assistant Agent is built on the <strong>VAST AI Operating System (AI OS)</strong> &mdash; a unified "Data-to-AI" stack that eliminates the traditional friction of moving data between storage, databases, and AI tools. Everything runs natively within the same infrastructure.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
 
         <table class="category-table">
             <thead>
                 <tr>
-                    <th>Component</th>
+                    <th>VAST Component</th>
                     <th>Function</th>
                     <th>Role in True360</th>
                 </tr>
@@ -1097,7 +1958,7 @@
                 <tr>
                     <td><strong>VAST InsightEngine</strong></td>
                     <td>Event-driven AI pipelines for ingest and RAG</td>
-                    <td>Automatically chunks, embeds, and indexes incoming BPR reports</td>
+                    <td>Auto-chunks, embeds, and indexes incoming BPR reports</td>
                 </tr>
                 <tr>
                     <td><strong>VAST AgentEngine</strong></td>
@@ -1107,7 +1968,7 @@
                 <tr>
                     <td><strong>VAST SyncEngine</strong></td>
                     <td>Bridges disparate data sources into the VAST AI OS</td>
-                    <td>Can pull BPR reports from external storage into the data estate</td>
+                    <td>Pulls BPR reports from external delivery into the data estate</td>
                 </tr>
                 <tr>
                     <td><strong>MCP Toolbox</strong></td>
@@ -1117,344 +1978,314 @@
             </tbody>
         </table>
 
-        <p>The agent's competitive advantages are significant: <strong>Zero-ETL RAG</strong> means it queries data exactly where it lives, eliminating the need to move data to a separate AI tool. <strong>Global scale</strong> allows it to reason across exabytes of data across edge, cloud, and on-premises environments. <strong>MCP compatibility</strong> means it can plug into external tools and services through the Model Context Protocol standard. And <strong>built-in security and governance</strong> ensures the agent only sees data the specific user is authorized to access.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
+        <p><strong>The integration is elegant because it's simple.</strong> BestPaidRep.com delivers a structured HTML report. The report enters the VAST DataStore via SyncEngine or API. InsightEngine automatically detects the new data, chunks it into semantically meaningful segments, generates vector embeddings, and indexes them in the VAST Vector DB. The Sales Assistant Agent's RAG queries now include this external intelligence alongside all internal data. No ETL. No middleware. No custom connectors.<a href="https://www.vastdata.com/blog/vectors-vision-velocity-vast-rag-pipelines-in-action" class="citation" target="_blank">[9]</a></p>
 
-        <p>What makes the VAST Sales Assistant Agent uniquely suited for True360 is its architecture. Unlike chatbots bolted onto existing systems, this agent was <strong>born inside the data platform</strong>. The Vector DB, the RAG pipeline, the MCP toolbox, and the agent runtime all share the same infrastructure. Adding a new intelligence source — like BestPaidRep.com's reports — is not an integration project. It is simply adding data to the platform the agent already reasons across.</p>
+        <p>The agent's competitive advantages are significant: <strong>Zero-ETL RAG</strong> means it queries data exactly where it lives. <strong>Global scale</strong> allows it to reason across exabytes of data. <strong>MCP compatibility</strong> means BPR can be registered as an external tool the agent calls on demand. And <strong>built-in security and governance</strong> ensures the agent only sees data the specific user is authorized to access.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
+
+        <p>What makes this architecture uniquely suited for True360 is that the Vector DB, the RAG pipeline, the MCP toolbox, and the agent runtime all share the same infrastructure. Adding BestPaidRep.com's intelligence is not an integration project. It is simply <strong>adding data to the platform the agent already reasons across</strong>.<a href="https://www.vastdata.com/blog/introducing-vast-vector-search-real-time-ai-retrieval-without-limits" class="citation" target="_blank">[10]</a></p>
     </section>
 
-    <!-- Section 5: The Integration -->
-    <section id="integration" class="section">
-        <div class="section-label">Section 5</div>
-        <h2>The Integration: How True360 Works</h2>
-        <p class="section-subtitle">Six steps from external intelligence to AI-powered customer insight.</p>
 
-        <p>The beauty of the True360 integration is its simplicity. Because VAST's AI OS was designed as a unified data-to-AI platform, adding BestPaidRep.com's external intelligence does not require custom middleware, ETL pipelines, or third-party connectors. The data flows naturally through VAST's existing architecture.<a href="https://www.vastdata.com/platform/insightengine" class="citation" target="_blank">[6]</a></p>
-
-        <div class="flow-container">
-            <div class="flow-step highlight-step">
-                <div class="step-num">1</div>
-                <div class="step-title">BPR Generates Report</div>
-                <div class="step-desc">AI-powered research on target account</div>
-            </div>
-            <div class="flow-arrow">&rarr;</div>
-            <div class="flow-step">
-                <div class="step-num">2</div>
-                <div class="step-title">Ingest to DataStore</div>
-                <div class="step-desc">Report enters VAST via SyncEngine/API</div>
-            </div>
-            <div class="flow-arrow">&rarr;</div>
-            <div class="flow-step">
-                <div class="step-num">3</div>
-                <div class="step-title">InsightEngine Processes</div>
-                <div class="step-desc">Auto-chunk, embed, index in Vector DB</div>
-            </div>
-            <div class="flow-arrow">&rarr;</div>
-            <div class="flow-step">
-                <div class="step-num">4</div>
-                <div class="step-title">Agent Enriched</div>
-                <div class="step-desc">Sales Assistant gains external intel</div>
-            </div>
-            <div class="flow-arrow">&rarr;</div>
-            <div class="flow-step">
-                <div class="step-num">5</div>
-                <div class="step-title">Rep Asks Question</div>
-                <div class="step-desc">Natural language query to agent</div>
-            </div>
-            <div class="flow-arrow">&rarr;</div>
-            <div class="flow-step highlight-step">
-                <div class="step-num">6</div>
-                <div class="step-title">True360 Response</div>
-                <div class="step-desc">Internal + external intel with citations</div>
-            </div>
-        </div>
-
-        <p><strong>Step 1 — BPR Generates the Report:</strong> BestPaidRep.com produces a comprehensive Opportunity Intelligence Report on a target account. The report covers financial analysis, executive profiles, technology infrastructure, AI strategy, validated pain points, employee sentiment, competitive landscape, and a strategic engagement roadmap — all with clickable source citations.<a href="https://kilakj57.github.io/bestpaidrep-reports/" class="citation" target="_blank">[7]</a></p>
-
-        <p><strong>Step 2 — Ingest to VAST DataStore:</strong> The report is delivered to the VAST DataStore. This can happen via VAST's SyncEngine (which bridges dozens of disparate data sources into the VAST AI OS), via a direct API call, or through an MCP tool registered in the AgentEngine's Toolbox. The report lands alongside CRM exports, email archives, and call transcripts — all in one unified data estate.<a href="https://www.vastdata.com/press-releases/vast-data-introduces-syncengine" class="citation" target="_blank">[8]</a></p>
-
-        <p><strong>Step 3 — InsightEngine Processes Automatically:</strong> The moment the report enters the DataStore, VAST's InsightEngine triggers. It automatically extracts text, chunks the content into semantically meaningful segments, generates vector embeddings using NVIDIA NeMo Retriever models, and indexes everything in VAST's integrated Vector DB. Metadata, structured tables, and citation links are preserved throughout the process.<a href="https://www.vastdata.com/blog/vectors-vision-velocity-vast-rag-pipelines-in-action" class="citation" target="_blank">[9]</a></p>
-
-        <p><strong>Step 4 — Sales Assistant Agent Enriched:</strong> The Sales Assistant Agent now has access to both internal data (CRM, emails, transcripts) and external intelligence (BPR reports) through the same Vector DB. No configuration change is needed — the agent's RAG queries automatically include the new data because it lives in the same unified namespace.<a href="https://www.vastdata.com/blog/introducing-vast-vector-search-real-time-ai-retrieval-without-limits" class="citation" target="_blank">[10]</a></p>
-
-        <p><strong>Step 5 — Rep Asks a Question:</strong> A sales rep asks the Sales Assistant a natural language question: "What are Expedia's biggest data infrastructure challenges, and how does our platform address them?"</p>
-
-        <p><strong>Step 6 — True360 Response:</strong> The agent performs a hybrid vector search across the entire data estate. It retrieves relevant chunks from the BPR report (external: "Expedia operates a 70+ PB data estate and is consolidating 21 legacy platform stacks..."), cross-references with internal CRM notes (internal: "Last meeting with Rajesh Naidu discussed data mesh migration timeline..."), and generates a comprehensive, cited response that no competitor's rep could match. <strong>This is True360.</strong></p>
-    </section>
-
-    <!-- Section 6: A Day in the Life -->
-    <section id="day-in-life" class="section section-light">
-        <div class="section-label">Section 6</div>
-        <h2>A Day in the Life: True360 in Action</h2>
-        <p class="section-subtitle">How a VAST sales rep's experience transforms with external intelligence.</p>
-
-        <p>To understand the power of True360, consider a concrete scenario. One of Julia's reps has a meeting with Expedia Group tomorrow morning. The rep needs to prepare. Here is what happens — with and without True360.</p>
-
-        <div class="comparison-grid">
-            <div class="comparison-card before">
-                <div class="card-badge">Without True360</div>
-                <h4>The Rep Asks the Sales Assistant:</h4>
-                <ul>
-                    <li>"What do we know about Expedia's data infrastructure?"</li>
-                    <li><strong>Agent Response:</strong> "Based on CRM records, we had a discovery call with Expedia on 11/15/2025. Notes indicate interest in storage solutions. No technical details captured. Last email from contact was 12/3/2025 requesting pricing."</li>
-                    <li><em>Result: The rep walks in with generic CRM data. No competitive advantage.</em></li>
-                </ul>
-            </div>
-            <div class="comparison-card after">
-                <div class="card-badge">With True360</div>
-                <h4>The Rep Asks the Same Question:</h4>
-                <ul>
-                    <li>"What do we know about Expedia's data infrastructure?"</li>
-                    <li><strong>Agent Response:</strong> "Expedia operates a 70+ PB data estate (confirmed by SVP & Chief Architect Rajesh Naidu). They are consolidating 21 legacy platform stacks into one unified architecture and migrating to a data mesh model. Key pain points include cross-region data access bottlenecks and escalating egress costs. They have deployed 1,500+ AI agents since January 2025 and operate an AI Playground with 60+ LLMs. CRM notes from 11/15 call confirm interest aligns with these infrastructure challenges. [Sources: BPR Report Ch.3, SEC Filing 10-K, CRM Note #4421]"</li>
-                    <li><em>Result: The rep walks in as a trusted advisor with intelligence no competitor has.</em></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="scenario-box">
-            <div class="scenario-header">
-                <div class="scenario-icon">&#128172;</div>
-                <div class="scenario-title">Follow-Up Query: "Who should I be talking to about data infrastructure decisions?"</div>
-            </div>
-            <div class="chat-bubble agent-limited">
-                <div class="bubble-label">Without True360</div>
-                "CRM shows primary contact: Sarah Johnson, VP of Procurement. No other contacts on file."
-            </div>
-            <div class="chat-bubble agent-full">
-                <div class="bubble-label">With True360</div>
-                "Key decision-makers for data infrastructure at Expedia: <strong>Ramana Thumu</strong> (CTO, since late 2024 — driving the unified platform consolidation), <strong>Rajesh Naidu</strong> (SVP & Chief Architect — owns the 70+ PB data estate and data mesh migration), and <strong>Scott Schenkel</strong> (CFO — focused on cost optimization including egress reduction). Your CRM contact Sarah Johnson in Procurement would be the commercial path, but technical sponsorship should come from Naidu's team. [Sources: BPR Report Ch.2, LinkedIn, Expedia Leadership Page]"
-            </div>
-        </div>
-
-        <p>The difference is not incremental — it is transformational. With True360, every VAST rep walks into every meeting armed with the kind of deep, multi-dimensional intelligence that used to require a dedicated research team and weeks of preparation. The Sales Assistant Agent becomes not just a data retrieval tool, but a <strong>strategic advisor</strong> powered by the most comprehensive customer intelligence available anywhere.</p>
-    </section>
-
-    <!-- Section 7: Why This Has Never Been Done -->
-    <section id="never-done" class="section section-dark">
-        <div class="section-label">Section 7</div>
-        <h2>Why This Has Never Been Done Before</h2>
-        <p class="section-subtitle">Three barriers had to fall simultaneously. They just did.</p>
-
-        <p>The concept of combining internal CRM data with external customer intelligence is not new. Every sales leader has wished for it. But three barriers have prevented it from becoming reality — until now.</p>
-
-        <div class="stat-row">
-            <div class="stat-card-dark">
-                <div class="stat-value">Barrier 1</div>
-                <div class="stat-label">No Structured External Intel</div>
-            </div>
-            <div class="stat-card-dark">
-                <div class="stat-value">Barrier 2</div>
-                <div class="stat-label">No Unified AI Data Platform</div>
-            </div>
-            <div class="stat-card-dark">
-                <div class="stat-value">Barrier 3</div>
-                <div class="stat-label">No Agentic AI Infrastructure</div>
-            </div>
-        </div>
-
-        <p><strong>Barrier 1: No one produced structured, RAG-ready external intelligence.</strong> Traditional data providers (ZoomInfo, Apollo, Lusha, 6sense) provide contact data and intent signals — useful for prospecting, but not for strategic selling. They tell you <em>who</em> to call, not <em>what to say</em>. BestPaidRep.com is the first company to produce comprehensive, multi-chapter, citation-rich intelligence reports designed specifically for AI agent consumption. The structured HTML format, consistent chapter organization, and embedded source metadata make these reports natively RAG-compatible.<a href="https://www.zoominfo.com/" class="citation" target="_blank">[3]</a></p>
-
-        <p><strong>Barrier 2: No platform unified storage, vector database, and AI compute.</strong> Before VAST's AI OS, building a RAG pipeline required stitching together separate storage systems, vector databases (Pinecone, Weaviate, Milvus), ETL pipelines, and compute infrastructure. The complexity and latency made real-time, multi-source reasoning impractical. VAST's Zero-ETL architecture eliminates this entirely — data is queried where it lives, with no movement, no transformation, and no latency penalty.<a href="https://www.vastdata.com/blog/the-unified-operating-system-for-enterprise-ai" class="citation" target="_blank">[11]</a></p>
-
-        <p><strong>Barrier 3: No enterprise-grade agentic AI infrastructure existed.</strong> Even with the right data and the right platform, you need an agent runtime that can reason across multiple data sources, maintain long-term memory, checkpoint its state, and operate with enterprise security and governance. VAST's AgentEngine — with its Studio, Toolbox, MCP compatibility, and observability framework — is the first purpose-built infrastructure for exactly this kind of multi-source, enterprise-grade AI reasoning.<a href="https://www.vastdata.com/blog/introducing-agentengine" class="citation" target="_blank">[5]</a></p>
-
-        <p>All three barriers have now fallen. BestPaidRep.com provides the external intelligence. VAST's AI OS provides the unified data platform. VAST's AgentEngine provides the agentic infrastructure. <strong>True360 is the natural convergence of all three.</strong></p>
-    </section>
-
-    <!-- Section 8: The Business Opportunity -->
-    <section id="opportunity" class="section">
+    <!-- Section 8: The Moat -->
+    <section id="moat" class="section section-dark">
         <div class="section-label">Section 8</div>
-        <h2>The Business Opportunity</h2>
-        <p class="section-subtitle">From POC to platform — the path to a new product category.</p>
+        <h2>The Moat</h2>
+        <p class="section-subtitle">"I could build that in a weekend." No. You can't. Here's why.</p>
 
-        <p>True360 is not just a feature for VAST's internal sales team. It is the foundation for a <strong>new product category</strong> — External Intelligence as a Service — that VAST can offer to every customer running the VAST AI OS.</p>
+        <div class="story-block-dark">
+            <div class="story-scene">Scene: A Slack channel at VAST. An engineer just saw the Expedia Opportunity Book.</div>
+            <p>"That's just fluff," he types. "It's an HTML page with some LLM output. I could build that in 8 hours." His colleague agrees: "Yeah, just hit the OpenAI API, scrape some websites, dump it into a template. Done."</p>
+            <p>They're not wrong about the technology. They're wrong about everything else.</p>
+            <p>These are infrastructure engineers. Brilliant ones. They build storage systems that handle exabytes. They design vector databases that search billions of embeddings in milliseconds. They are world-class at what they do. But they have never carried a bag. They have never sat across from a CTO who controls a $50 million budget and had 45 minutes to earn trust. They have never lost a deal because they didn't know the CFO's name. They have never been in the parking garage at 7:47 AM, terrified.</p>
+            <p>That's the moat. And it's uncrossable.</p>
+        </div>
 
-        <div class="stat-row">
-            <div class="stat-card">
-                <div class="stat-value">600</div>
-                <div class="stat-label">VAST Reps (12-Month Target)</div>
-                <div class="stat-detail">Hyper-growth means massive demand for sales intelligence</div>
+        <p>Let's address the "I could build that" argument directly, because it will come up. It always does.</p>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th>What Engineers See</th>
+                    <th>What They're Missing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"It's just an LLM generating text"</td>
+                    <td>It's 30+ years of domain expertise encoded into research methodology, source selection, pain point validation, and narrative structure. The LLM is the pen. JB is the author.</td>
+                </tr>
+                <tr>
+                    <td>"I can scrape the same websites"</td>
+                    <td>Knowing <em>which</em> websites to scrape, <em>what</em> to look for, and <em>how</em> to interpret what you find requires decades of enterprise sales experience. A Glassdoor review means nothing to an engineer. To an ER, it's a buying signal.</td>
+                </tr>
+                <tr>
+                    <td>"The HTML template is simple"</td>
+                    <td>The template is the least important part. The intelligence methodology &mdash; 8 research channels, cross-validated pain points, executive profiling, competitive positioning &mdash; is the product.</td>
+                </tr>
+                <tr>
+                    <td>"RAG is a solved problem"</td>
+                    <td>RAG retrieval is solved. Knowing what questions an ER actually needs answered in a live meeting is not. The quality of the data going INTO the RAG pipeline determines the quality of what comes OUT.</td>
+                </tr>
+                <tr>
+                    <td>"We could do this internally"</td>
+                    <td>You could. You won't. Because your engineers are building infrastructure, your SAs are doing demos, and your reps are trying to hit quota. Nobody has time to become a research analyst. That's why it's DFY.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The moat is not code. The moat is not technology. The moat is <strong>domain expertise that cannot be replicated by someone who has never done the job</strong>.</p>
+
+        <p>ZoomInfo can tell you a company's revenue and the CEO's email. Apollo can give you a contact list. Gong can transcribe your calls. None of them can tell you that the CTO's Glassdoor review about "legacy platform fatigue" is a buying signal, that the CFO's earnings call comment about "optimizing cloud egress costs" maps directly to your value proposition, or that the three Databricks job postings mean you're about to lose the account to a lakehouse play.</p>
+
+        <p>BestPaidRep.com can. Because it was <strong>built by sales, for sales</strong>. By someone who spent 30+ years in the arena, not in the engineering lab.</p>
+
+        <p>The engineers build the bridge between servers. <strong>BestPaidRep.com builds the bridge to the ER kingdom.</strong></p>
+
+        <div class="dfy-badge">Built by Sales. For Sales. DFY White Glove.</div>
+    </section>
+
+    <!-- Section 9: A Day in the Life -->
+    <section id="day-in-life" class="section">
+        <div class="section-label">Section 9</div>
+        <h2>A Day in the Life</h2>
+        <p class="section-subtitle">Two enterprise reps. Same account. Same meeting. One has True360. One doesn't.</p>
+
+        <div class="comparison-container">
+            <div class="comparison-card before">
+                <div class="comparison-header">WITHOUT True360</div>
+                <div class="timeline-item">
+                    <div class="time">6:30 AM</div>
+                    <div class="event">Alarm goes off. Big meeting today with Expedia. Opens laptop in bed. Starts Googling "Expedia technology stack." Gets 4 million results. Reads a 2022 article. Hopes it's still accurate.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">7:15 AM</div>
+                    <div class="event">Slacks the SA: "Hey, do we have anything on Expedia's infrastructure?" SA responds: "Let me check." Translation: SA will spend 3 hours on this and resent it.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">8:00 AM</div>
+                    <div class="event">Checks CRM. Last note is from 6 months ago: "Good meeting. Will follow up." No context. No names. No strategy.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">9:30 AM</div>
+                    <div class="event">SA sends a 40-page PDF from the marketing team. It's a generic "VAST for Travel Industry" deck. Not specific to Expedia. Not helpful.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:00 AM</div>
+                    <div class="event">Meeting starts. Rep opens with: "So, tell me about your infrastructure challenges." The CTO's face says it all: You should already know this.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:45 AM</div>
+                    <div class="event">Meeting ends. "We'll be in touch." They won't.</div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">$47B</div>
-                <div class="stat-label">Sales Intelligence Market</div>
-                <div class="stat-detail">Projected market size by 2030<a href="https://www.grandviewresearch.com/industry-analysis/sales-intelligence-market" class="citation" target="_blank">[12]</a></div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">New</div>
-                <div class="stat-label">Product Category</div>
-                <div class="stat-detail">External Intelligence as a Service — no one owns this space yet</div>
+
+            <div class="comparison-card after">
+                <div class="comparison-header">WITH True360</div>
+                <div class="timeline-item">
+                    <div class="time">6:30 AM</div>
+                    <div class="event">Alarm goes off. Big meeting today with Expedia. Puts in AirPods. "Hey True360, give me the 5-minute briefing on Expedia." Listens while making coffee.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">7:15 AM</div>
+                    <div class="event">Drives to the office. Asks True360: "Who am I meeting with and what do they care about?" Gets Rajesh Naidu's profile, priorities, and the fact that he just promoted David Chen to lead the production pilot.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">8:00 AM</div>
+                    <div class="event">Quick glance at the Opportunity Intelligence Book on the phone. Sees the three validated pain points, the competitive landscape, and the recommended opening strategy. No SA needed.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">9:30 AM</div>
+                    <div class="event">Reviews the infographic summary. Memorizes two key stats: 70+ PB data estate, 21 legacy platforms being consolidated. These will be conversation starters.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:00 AM</div>
+                    <div class="event">Meeting starts. Rep opens with: "I understand you're consolidating 21 legacy platform stacks and your team is focused on reducing cross-region egress costs." The CTO leans forward.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:45 AM</div>
+                    <div class="event">"Let me introduce you to David Chen. Let's set up a lunch." Deal moves to engagement. The rep never opened a laptop before 10 AM.</div>
+                </div>
             </div>
         </div>
 
-        <p><strong>Phase 1 — VAST Internal (Now):</strong> Deploy True360 for VAST's own sales team. BestPaidRep.com generates Opportunity Intelligence Reports for VAST's top target accounts. Reports are ingested into the VAST Sales Assistant Agent. VAST reps experience the True360 difference firsthand. This is the POC.</p>
+        <p>Same rep. Same account. Same meeting time. The only difference: one had True360, and one didn't. One spent the morning panicking and bothering the SA. The other spent the morning listening to a podcast and drinking coffee. One lost the deal. The other advanced it.</p>
 
-        <p><strong>Phase 2 — VAST as Showcase:</strong> VAST becomes the reference customer for True360. Every prospect demo of the VAST AI OS can showcase the Sales Assistant Agent with True360 intelligence — demonstrating not just what the platform <em>can</em> do, but what it <em>is</em> doing for VAST's own revenue team. This is the most powerful sales tool imaginable: a live, working example of the product selling itself.</p>
+        <p><strong>That's the product.</strong> Not the technology. Not the RAG pipeline. Not the vector embeddings. The product is the difference between those two mornings. The product is confidence. The product is preparation. The product is walking into the room knowing more about the client's business than the client expects you to know.</p>
 
-        <p><strong>Phase 3 — Productize for VAST Customers:</strong> Package True360 as a value-added capability for any VAST customer running the Sales Assistant Agent. BestPaidRep.com becomes the external intelligence engine; VAST provides the platform. Every VAST customer with a sales team becomes a potential True360 customer.</p>
+        <p>And the rep never did any of the work. It was all <strong>DFY. White glove. Built by sales, for sales.</strong></p>
+    </section>
 
-        <p><strong>Phase 4 — Expand to Salesforce &amp; HubSpot:</strong> The True360 architecture is CRM-agnostic. After proving the model with VAST, the same external intelligence layer can be integrated with Salesforce's Agentforce, HubSpot's AI tools, and any other CRM with AI agent capabilities. The market expands from VAST customers to the entire enterprise CRM ecosystem.</p>
+    <!-- Section 10: The Opportunity -->
+    <section id="opportunity" class="section section-light">
+        <div class="section-label">Section 10</div>
+        <h2>The Opportunity</h2>
+        <p class="section-subtitle">Why this matters for VAST, for Salesforce, for HubSpot &mdash; and for the entire enterprise sales industry.</p>
+
+        <div class="story-block">
+            <div class="story-scene">Scene: A boardroom. 18 months from now.</div>
+            <p>VAST Data has 600 enterprise reps. Every one of them has True360. The installed base is growing at 40% year-over-year because Land &amp; Expand is now a science, not a hope. New logo acquisition is up 25% because reps walk into every first meeting knowing more than the competition. The SA team has been freed from research duty and is back to doing what they do best: technical demos and architecture reviews. The VP of Sales is smiling for the first time in quarters.</p>
+            <p>And then Salesforce calls. "We want to offer this to all of our customers."</p>
+        </div>
+
+        <p>True360 is not just a product for VAST. It's a <strong>platform play</strong> that can be replicated across every CRM ecosystem on the planet:</p>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Integration Path</th>
+                    <th>Market Size</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>VAST Data + Salesforce</strong></td>
+                    <td>VAST AI OS &rarr; Salesforce via SyncEngine</td>
+                    <td>VAST's entire enterprise customer base</td>
+                    <td style="color: var(--accent); font-weight: 700;">Phase 1 &mdash; NOW</td>
+                </tr>
+                <tr>
+                    <td><strong>Salesforce Native</strong></td>
+                    <td>Direct Salesforce integration via AppExchange</td>
+                    <td>150,000+ Salesforce enterprise customers</td>
+                    <td>Phase 2 &mdash; Next</td>
+                </tr>
+                <tr>
+                    <td><strong>HubSpot True360</strong></td>
+                    <td>HubSpot CRM integration via API</td>
+                    <td>200,000+ HubSpot customers</td>
+                    <td>Phase 3</td>
+                </tr>
+                <tr>
+                    <td><strong>Microsoft Dynamics</strong></td>
+                    <td>Dynamics 365 integration</td>
+                    <td>500,000+ Dynamics users</td>
+                    <td>Phase 4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The vision is clear: <strong>True360 becomes the external intelligence layer for every CRM on the planet.</strong> VAST is the first partner because the AI OS architecture makes the integration seamless. Salesforce is next because it's the largest CRM ecosystem. HubSpot follows because it's the fastest-growing. And at some point, the question becomes: why not acquire one of the existing data providers (ZoomInfo, Apollo, Lusha) and replace their static contact databases with True360's living, breathing, AI-powered intelligence?</p>
+
+        <p>That's not a fantasy. That's a business plan. And it starts with one thing: <strong>proving the model works at VAST.</strong></p>
+
+        <div class="stat-row">
+            <div class="stat-card">
+                <div class="stat-number">600</div>
+                <div class="stat-label">VAST Reps in 12 Months</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">150K+</div>
+                <div class="stat-label">Salesforce Enterprise Customers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$14B+</div>
+                <div class="stat-label">Sales Intelligence TAM</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1st</div>
+                <div class="stat-label">True 360 View Ever Built</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Next Steps -->
+    <section id="next-steps" class="section">
+        <div class="section-label">Section 11</div>
+        <h2>Next Steps: The Engagement Plan</h2>
+        <p class="section-subtitle">From handshake to production in 12 weeks.</p>
 
         <table class="category-table">
             <thead>
                 <tr>
                     <th>Phase</th>
-                    <th>Scope</th>
-                    <th>Market Size</th>
                     <th>Timeline</th>
+                    <th>Deliverables</th>
+                    <th>Success Criteria</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Phase 1</strong></td>
-                    <td>VAST Internal Sales Team</td>
-                    <td>POC — Proof of Value</td>
-                    <td>Now</td>
+                    <td><strong>Phase 1: POC</strong></td>
+                    <td>Weeks 1&ndash;4</td>
+                    <td>5 Opportunity Intelligence Books for live VAST accounts; ingest into Sales Assistant Agent; validate "Hey True360" queries</td>
+                    <td>Reps confirm intelligence accuracy and usefulness; agent returns BPR-sourced answers with citations</td>
                 </tr>
                 <tr>
-                    <td><strong>Phase 2</strong></td>
-                    <td>VAST as Reference Customer</td>
-                    <td>Demo &amp; Showcase Asset</td>
-                    <td>Q1 2026</td>
+                    <td><strong>Phase 2: Pilot</strong></td>
+                    <td>Weeks 5&ndash;8</td>
+                    <td>Expand to 25 accounts; add Land &amp; Expand intelligence; deliver first Unsolicited Bids; add audio briefings and slide decks</td>
+                    <td>Measurable pipeline acceleration; rep adoption rate above 80%; first UB-generated meeting booked</td>
                 </tr>
                 <tr>
-                    <td><strong>Phase 3</strong></td>
-                    <td>VAST Customer Base</td>
-                    <td>Hundreds of Enterprise Accounts</td>
-                    <td>Q2-Q3 2026</td>
+                    <td><strong>Phase 3: Scale</strong></td>
+                    <td>Weeks 9&ndash;12</td>
+                    <td>Full services portfolio (podcasts, videos, QBRs, infographics); automated refresh triggers; "Hey True360" voice integration</td>
+                    <td>100+ accounts covered; management QBR automation live; competitive win rate improvement documented</td>
                 </tr>
                 <tr>
-                    <td><strong>Phase 4</strong></td>
-                    <td>Salesforce / HubSpot Ecosystem</td>
-                    <td>$47B+ Market Opportunity</td>
-                    <td>Q4 2026+</td>
+                    <td><strong>Phase 4: Enterprise Rollout</strong></td>
+                    <td>Months 4&ndash;12</td>
+                    <td>Roll to all 600 reps; Salesforce integration planning; HubSpot True360 design; Salesforce Ventures conversation</td>
+                    <td>Full deployment; revenue impact quantified; next platform partnership signed</td>
                 </tr>
             </tbody>
         </table>
+
+        <p>The POC starts with 5 accounts. Real accounts. Real reps. Real meetings. We deliver the Opportunity Intelligence Books, ingest them into the VAST AI OS, and let the reps experience the "Hey True360" moment for themselves. Once they feel it &mdash; once they walk into a meeting knowing more than they've ever known &mdash; they'll never go back.</p>
+
+        <p>That's how you scale from 5 to 600. Not by mandating adoption. By making the product so good that reps demand it.</p>
     </section>
 
-    <!-- Section 9: Proposed Next Steps -->
-    <section id="next-steps" class="section section-light">
-        <div class="section-label">Section 9</div>
-        <h2>Proposed Next Steps</h2>
-        <p class="section-subtitle">A practical roadmap from concept to production.</p>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="phase-label">Phase 1 — Week 1-2</div>
-                <h4>POC: Ingest the Expedia Opportunity Book</h4>
-                <p>Take the completed Expedia Group Opportunity Intelligence Report and ingest it into the VAST Sales Assistant Agent's data estate. Verify that InsightEngine properly chunks, embeds, and indexes the report. Confirm the agent can retrieve and cite BPR intelligence in response to natural language queries.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="phase-label">Phase 2 — Week 3-4</div>
-                <h4>Validate: Side-by-Side Comparison</h4>
-                <p>Run a series of test queries with and without True360 data. Document the difference in response quality, depth, and actionability. Capture screenshots and transcripts for the business case. Identify any refinements needed in report structure for optimal RAG performance.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="phase-label">Phase 3 — Week 5-8</div>
-                <h4>Scale: Generate Reports for Top 10 Accounts</h4>
-                <p>BestPaidRep.com generates Opportunity Intelligence Reports for VAST's top 10 target accounts. All reports are ingested into the Sales Assistant Agent. Reps begin using True360 intelligence in real sales cycles. Measure impact on meeting preparation time, conversation quality, and deal progression.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="phase-label">Phase 4 — Week 9-12</div>
-                <h4>Measure: Quantify the True360 Impact</h4>
-                <p>Collect metrics on rep productivity, meeting quality scores, and pipeline velocity. Build the business case for productization. Prepare the True360 demo for VAST's customer-facing AI OS presentations.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="phase-label">Phase 5 — Week 13+</div>
-                <h4>Productize: True360 as a VAST Platform Feature</h4>
-                <p>Package True360 as a value-added capability for VAST customers. Define pricing, packaging, and go-to-market strategy. Begin conversations with Salesforce and HubSpot for ecosystem expansion.</p>
-            </div>
+    <!-- Closing: Thank You -->
+    <section id="closing" class="section section-dark" style="text-align: center; padding: 80px 60px;">
+        <div class="author-photo" style="margin: 0 auto 30px auto;">
+            <img src="https://i.postimg.cc/gc2VTkM6/znw-Vkxg-Kh-Ky-Dn-Gv-Eo-Yz-Zy-Oc-Y.jpg" alt="JB Kilakowske" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
         </div>
+        <a href="https://johnkilakowske.com" target="_blank" style="color: var(--accent); font-size: 0.95rem; text-decoration: none; display: block; margin-bottom: 30px;">johnkilakowske.com</a>
+
+        <h2 style="color: white; margin-bottom: 20px;">Thank You</h2>
+
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; max-width: 700px; margin: 0 auto 25px auto; line-height: 1.8;">Julia and Brad &mdash; thank you for your time, your vision, and your willingness to explore something that has never been done before. True360 is the first external intelligence layer ever built for an enterprise CRM ecosystem. It's built by someone who spent 30+ years in the arena, not in the engineering lab. And it's built for the people who carry the hardest job in the enterprise: the rep.</p>
+
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; max-width: 700px; margin: 0 auto 25px auto; line-height: 1.8;">I started BestPaidRep.com because I believe enterprise sales professionals deserve better intelligence, delivered in a way that respects their time and their craft. VAST Data's AI OS is the perfect platform to bring this vision to life. Together, we can build something that transforms how every enterprise rep on the planet prepares for the most important meetings of their career.</p>
+
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.8;">Let's make True360 real. Let's turn beans into steak.</p>
+
+        <p style="color: var(--accent); font-size: 1.3rem; font-family: 'Playfair Display', serif; font-weight: 700;">JB Kilakowske</p>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Founder, <a href="https://bestpaidrep.com" target="_blank" style="color: var(--accent);">BestPaidRep.com</a></p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 10px;">Built by Sales. For Sales. DFY White Glove.</p>
+
+        <div class="dfy-badge" style="margin-top: 40px;">A System Built by Sales, For Sales</div>
     </section>
 
     <!-- Sources -->
-    <section id="sources" class="section">
-        <div class="section-label">Sources &amp; Citations</div>
-        <h2>References</h2>
-        <p class="section-subtitle">All claims in this document are sourced and verifiable.</p>
-
-        <div class="sources-list">
-            <div class="source-item">
-                <span class="source-num">1</span>
-                <a href="https://www.salesforce.com/crm/" target="_blank">Salesforce CRM Platform Overview</a> — salesforce.com
-            </div>
-            <div class="source-item">
-                <span class="source-num">2</span>
-                <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank">State of Sales Report</a> — Salesforce Research
-            </div>
-            <div class="source-item">
-                <span class="source-num">3</span>
-                <a href="https://www.zoominfo.com/" target="_blank">ZoomInfo Platform</a> — zoominfo.com
-            </div>
-            <div class="source-item">
-                <span class="source-num">4</span>
-                <a href="https://www.vastdata.com/resources/demos/the-vast-ai-os-demo-and-walkthrough" target="_blank">The VAST AI OS Demo &amp; Walkthrough</a> — VAST Data
-            </div>
-            <div class="source-item">
-                <span class="source-num">5</span>
-                <a href="https://www.vastdata.com/blog/introducing-agentengine" target="_blank">Introducing AgentEngine</a> — VAST Data Blog
-            </div>
-            <div class="source-item">
-                <span class="source-num">6</span>
-                <a href="https://www.vastdata.com/platform/insightengine" target="_blank">VAST InsightEngine Platform</a> — vastdata.com
-            </div>
-            <div class="source-item">
-                <span class="source-num">7</span>
-                <a href="https://kilakj57.github.io/bestpaidrep-reports/" target="_blank">Expedia Opportunity Intelligence Report</a> — BestPaidRep.com
-            </div>
-            <div class="source-item">
-                <span class="source-num">8</span>
-                <a href="https://www.vastdata.com/press-releases/vast-data-introduces-syncengine" target="_blank">VAST Data Introduces SyncEngine</a> — VAST Data Press Release
-            </div>
-            <div class="source-item">
-                <span class="source-num">9</span>
-                <a href="https://www.vastdata.com/blog/vectors-vision-velocity-vast-rag-pipelines-in-action" target="_blank">Vectors, Vision, Velocity: VAST RAG Pipelines in Action</a> — VAST Data Blog
-            </div>
-            <div class="source-item">
-                <span class="source-num">10</span>
-                <a href="https://www.vastdata.com/blog/introducing-vast-vector-search-real-time-ai-retrieval-without-limits" target="_blank">Introducing VAST Vector Search</a> — VAST Data Blog
-            </div>
-            <div class="source-item">
-                <span class="source-num">11</span>
-                <a href="https://www.vastdata.com/blog/the-unified-operating-system-for-enterprise-ai" target="_blank">The Unified Operating System for Enterprise AI</a> — VAST Data Blog
-            </div>
-            <div class="source-item">
-                <span class="source-num">12</span>
-                <a href="https://www.grandviewresearch.com/industry-analysis/sales-intelligence-market" target="_blank">Sales Intelligence Market Analysis</a> — Grand View Research
-            </div>
-            <div class="source-item">
-                <span class="source-num">13</span>
-                <a href="https://www.vastdata.com/blog/vast-unveils-game-changing-ai-agent-connect-enterprise-data" target="_blank">VAST Unveils Game-Changing AI Agent</a> — VAST Data Blog
-            </div>
-            <div class="source-item">
-                <span class="source-num">14</span>
-                <a href="https://www.vastdata.com/blog/data-infrastructure-accelerate-infrastructure-management-with-mcps" target="_blank">Accelerate Infrastructure Management with MCPs</a> — VAST Data Blog
-            </div>
+    <section id="sources" class="section" style="padding-bottom: 100px;">
+        <div class="section-label">Sources</div>
+        <h2>Sources &amp; Citations</h2>
+        <p>Every claim in this document is grounded in publicly available information. Below are the primary sources referenced throughout.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px;">
+            <div class="source-item">[1] <a href="https://www.vastdata.com/blog/vast-unveils-game-changing-ai-agent-connect-enterprise-data" target="_blank">VAST Data &mdash; AI Agent That Connects Enterprise Data</a></div>
+            <div class="source-item">[2] <a href="https://www.vastdata.com/platform" target="_blank">VAST Data Platform Overview</a></div>
+            <div class="source-item">[3] <a href="https://www.vastdata.com/blog/vast-data-aios-sales-assistant" target="_blank">VAST AI OS Sales Assistant</a></div>
+            <div class="source-item">[4] <a href="https://www.salesforce.com/crm/" target="_blank">Salesforce CRM Platform</a></div>
+            <div class="source-item">[5] <a href="https://www.vastdata.com/blog/introducing-agentengine" target="_blank">VAST AgentEngine Introduction</a></div>
+            <div class="source-item">[6] <a href="https://www.vastdata.com/platform/insightengine" target="_blank">VAST InsightEngine</a></div>
+            <div class="source-item">[7] <a href="https://bestpaidrep.com" target="_blank">BestPaidRep.com</a></div>
+            <div class="source-item">[8] <a href="https://johnkilakowske.com" target="_blank">JB Kilakowske &mdash; Personal Site</a></div>
+            <div class="source-item">[9] <a href="https://www.vastdata.com/blog/vectors-vision-velocity-vast-rag-pipelines-in-action" target="_blank">VAST RAG Pipelines in Action</a></div>
+            <div class="source-item">[10] <a href="https://www.vastdata.com/blog/introducing-vast-vector-search-real-time-ai-retrieval-without-limits" target="_blank">VAST Vector Search</a></div>
+            <div class="source-item">[11] <a href="https://www.zoominfo.com" target="_blank">ZoomInfo</a></div>
+            <div class="source-item">[12] <a href="https://www.apollo.io" target="_blank">Apollo.io</a></div>
+            <div class="source-item">[13] <a href="https://www.gong.io" target="_blank">Gong.io</a></div>
+            <div class="source-item">[14] <a href="https://www.hubspot.com" target="_blank">HubSpot CRM</a></div>
+            <div class="source-item">[15] <a href="https://notebooklm.google.com" target="_blank">Google NotebookLM</a></div>
+            <div class="source-item">[16] <a href="https://www.vastdata.com/blog/vast-data-the-next-platform" target="_blank">VAST Data &mdash; The Next Platform</a></div>
         </div>
     </section>
 
-    <!-- Closing / Thank You -->
-    <section id="closing" class="thank-you">
-        <img src="https://i.postimg.cc/gc2VTkM6/znw-Vkxg-KRYu-HRt-Ij-Hn-Aw-A.jpg" alt="JB - Founder, BestPaidRep.com" class="author-photo" style="display:block; margin: 0 auto 20px;">
-        <a href="https://johnkilakowske.com" target="_blank" style="color: var(--accent); font-size: 0.9rem; display: block; margin-bottom: 30px;">johnkilakowske.com</a>
-
-        <h2>Thank You, Julia &amp; Brad</h2>
-
-        <p>I want to express my sincere gratitude for your time, your vision, and your willingness to explore what True360 can become. VAST Data is building the operating system for the AI era, and BestPaidRep.com is building the external intelligence layer that completes the picture.</p>
-
-        <p>Together, we have the opportunity to create something that has never existed before — a true 360-degree customer view powered by AI, where every sales rep walks into every meeting armed with intelligence that no competitor can match. Not because they spent weeks researching, but because the system did it for them.</p>
-
-        <p>I spent 30 years in enterprise sales wishing for this. Now we can build it.</p>
-
-        <p style="margin-top: 30px; font-size: 1.1rem; color: white;"><strong>Let's make True360 real.</strong></p>
-
-        <p style="margin-top: 40px; color: rgba(255,255,255,0.5); font-size: 0.85rem;">
-            JB (John Kilakowske) &mdash; Founder, <a href="https://bestpaidrep.com" target="_blank" style="color: var(--accent);">BestPaidRep.com</a><br>
-            <em>"AI-Powered Intelligence for Enterprise Sales"</em>
-        </p>
-    </section>
-
 </div>
-
 </body>
 </html>
+

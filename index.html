@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedia Group: Enterprise Opportunity Intelligence Report | BestPaidRep.com</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --primary: #0F2440;
+  --primary-dark: #091A30;
+  --primary-light: #1B3A5C;
+  --accent: #FF6B00;
+  --accent-light: #FF8C33;
+  --accent-dark: #E05E00;
+  --bg-cream: #FFFFFF;
+  --bg-white: #FFFFFF;
+  --bg-light: #F5F7FA;
+  --text-dark: #0F2440;
+  --text-body: #2A3A4A;
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #3B82F6;
+  --teal: #0D9488;
+  --purple: #7C3AED;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-cream);
+  color: var(--text-body);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* PRINT STYLES */
+@media print {
+  body { background: white; }
+  .cover-page { page-break-after: always; }
+  .chapter { page-break-before: always; }
+  .no-print { display: none !important; }
+  .nav-sidebar { display: none !important; }
+  .main-content { margin-left: 0 !important; }
+}
+
+/* NAVIGATION SIDEBAR */
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--primary-dark);
+  color: white;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 2rem 0;
+  border-right: 3px solid var(--accent);
+}
+
+.nav-sidebar::-webkit-scrollbar { width: 4px; }
+.nav-sidebar::-webkit-scrollbar-track { background: var(--primary-dark); }
+.nav-sidebar::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+.nav-brand {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 1rem;
+}
+
+.nav-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.nav-brand p {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-toc {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-toc li {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-toc a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.5rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  line-height: 1.4;
+}
+
+.nav-toc a:hover {
+  background: rgba(200,169,81,0.1);
+  color: var(--accent);
+  padding-left: 2rem;
+}
+
+.nav-toc .chapter-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(200,169,81,0.15);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 280px;
+  min-height: 100vh;
+}
+
+/* COVER PAGE */
+.cover-page {
+  min-height: 100vh;
+  background: var(--primary-dark);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+}
+
+.cover-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.cover-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, var(--primary-dark));
+}
+
+.cover-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem 4rem;
+  position: relative;
+  z-index: 2;
+  margin-top: -8rem;
+}
+
+.cover-badge {
+  display: inline-block;
+  background: rgba(200,169,81,0.2);
+  border: 1px solid rgba(200,169,81,0.4);
+  color: var(--accent);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  max-width: 700px;
+}
+
+.cover-title span {
+  color: var(--accent);
+}
+
+.cover-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.cover-meta {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.cover-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cover-meta-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.cover-meta-value {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.cover-bio {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+}
+
+.cover-bio h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.cover-bio p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+
+.cover-photo-credit {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* CHAPTER STYLES */
+.chapter {
+  padding: 4rem 4rem 5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.chapter-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.chapter-number {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--accent);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.chapter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.chapter-intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 700px;
+}
+
+/* CONTENT ELEMENTS */
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 2rem 0 0.75rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+a {
+  color: var(--info);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: var(--info);
+}
+
+/* TABLES */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.88rem;
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table thead {
+  background: var(--primary);
+  color: white;
+}
+
+.data-table th {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.data-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-light);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* CARDS */
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-accent {
+  border-left: 4px solid var(--accent);
+}
+
+.card-primary {
+  border-left: 4px solid var(--primary);
+}
+
+.card-success {
+  border-left: 4px solid var(--success);
+}
+
+.card-warning {
+  border-left: 4px solid var(--warning);
+}
+
+.card-danger {
+  border-left: 4px solid var(--danger);
+}
+
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* STAT GRID */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+.stat-change {
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.stat-change.up { color: var(--success); }
+.stat-change.down { color: var(--danger); }
+
+/* QUOTE BLOCK */
+.quote-block {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.quote-block::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.5rem;
+  color: var(--accent);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.quote-block p {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-source {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* PAIN POINT CARDS */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.pain-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.pain-card .severity-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.severity-badge.critical { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.2); }
+.severity-badge.high { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid rgba(245,158,11,0.2); }
+.severity-badge.medium { background: rgba(59,130,246,0.1); color: var(--info); border: 1px solid rgba(59,130,246,0.2); }
+
+.pain-card h4 {
+  margin-top: 0;
+  padding-right: 70px;
+}
+
+.vast-solution {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(16,185,129,0.06);
+  border: 1px solid rgba(16,185,129,0.15);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--teal);
+  line-height: 1.5;
+}
+
+.vast-solution strong {
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+/* EXEC CARDS */
+.exec-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.exec-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  box-shadow: var(--shadow-sm);
+}
+
+.exec-photo-area {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.exec-initials {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: rgba(255,107,0,0.15);
+  border: 3px solid var(--accent);
+  color: var(--accent);
+  overflow: hidden;
+}
+
+.exec-initials img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.exec-initials a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.author-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  box-shadow: var(--shadow-md);
+}
+
+.author-photo-link {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.exec-photo-area h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: white;
+  margin: 0 0 0.25rem;
+}
+
+.exec-photo-area .exec-role {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+
+.exec-details-area {
+  padding: 2rem;
+}
+
+.exec-details-area h5 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.exec-details-area p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.exec-strategy-box {
+  background: rgba(200,169,81,0.08);
+  border: 1px solid rgba(200,169,81,0.2);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.exec-strategy-box h6 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-dark);
+  margin-bottom: 0.4rem;
+}
+
+.exec-strategy-box p {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  margin-bottom: 0;
+}
+
+/* TECH STACK */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tech-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-item .tech-category {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tech-item .tech-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+}
+
+.tech-item .tech-status {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+/* VALUE PROP */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.value-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.value-card .value-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.value-card h4 {
+  margin-top: 0;
+}
+
+/* ACTION PLAN */
+.action-timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.action-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+}
+
+.action-step {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.action-step::before {
+  content: '';
+  position: absolute;
+  left: -1.6rem;
+  top: 0.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-cream);
+}
+
+.action-step h4 {
+  margin-top: 0;
+}
+
+.action-step .timeline-label {
+  display: inline-block;
+  background: rgba(200,169,81,0.15);
+  color: var(--accent-dark);
+  padding: 0.15rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* THANK YOU */
+.thank-you-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: white;
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.thank-you-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.thank-you-section p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+}
+
+.thank-you-section .signature {
+  margin-top: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.thank-you-section .signature-title {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.25rem;
+}
+
+.thank-you-section a {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* SOURCES */
+.sources-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sources-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+
+.sources-list li:last-child {
+  border-bottom: none;
+}
+
+.source-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* DIVIDER */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 3rem 0;
+  border-radius: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .nav-sidebar { display: none; }
+  .main-content { margin-left: 0; }
+  .chapter { padding: 3rem 2rem; }
+  .cover-content { padding: 2rem; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .pain-grid { grid-template-columns: 1fr; }
+  .exec-card { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .value-grid { grid-template-columns: 1fr; }
+  .cover-title { font-size: 2.5rem; }
+}
+
+/* CONFIDENTIAL BANNER */
+.confidential-banner {
+  background: var(--accent);
+  color: var(--primary-dark);
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION SIDEBAR -->
+<nav class="nav-sidebar no-print">
+  <div class="nav-brand">
+    <h3>BestPaidRep.com</h3>
+    <p>Opportunity Intelligence</p>
+  </div>
+  <ul class="nav-toc">
+    <li><a href="#cover"><span class="chapter-num">&bull;</span> Cover</a></li>
+    <li><a href="#authors-note"><span class="chapter-num">&bull;</span> Author's Note</a></li>
+    <li><a href="#executive-summary"><span class="chapter-num">&bull;</span> Executive Summary</a></li>
+    <li><a href="#chapter1"><span class="chapter-num">1</span> Company Overview & Financials</a></li>
+    <li><a href="#chapter2"><span class="chapter-num">2</span> Executive Leadership</a></li>
+    <li><a href="#chapter3"><span class="chapter-num">3</span> Technology & Data Architecture</a></li>
+    <li><a href="#chapter4"><span class="chapter-num">4</span> AI & Innovation Strategy</a></li>
+    <li><a href="#chapter5"><span class="chapter-num">5</span> Validated Pain Points</a></li>
+    <li><a href="#chapter6"><span class="chapter-num">6</span> Employee & Cultural Intel</a></li>
+    <li><a href="#chapter7"><span class="chapter-num">7</span> Competitive Landscape</a></li>
+    <li><a href="#chapter8"><span class="chapter-num">8</span> VAST Data Value Proposition</a></li>
+    <li><a href="#chapter9"><span class="chapter-num">9</span> Global Footprint</a></li>
+    <li><a href="#chapter10"><span class="chapter-num">10</span> Action Plan & Next Steps</a></li>
+    <li><a href="#thank-you"><span class="chapter-num">&bull;</span> Thank You</a></li>
+    <li><a href="#sources"><span class="chapter-num">&bull;</span> Sources & Citations</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<!-- CONFIDENTIAL BANNER -->
+<div class="confidential-banner">Confidential &mdash; Prepared Exclusively for Julia Kalez, VAST Data</div>
+
+<!-- ==================== COVER PAGE ==================== -->
+<section class="cover-page" id="cover">
+  <div class="cover-image-wrapper">
+    <img src="https://i.postimg.cc/sfgYNDnR/Sq_MLoqddis_QVh_Dsg.jpg" alt="Expedia Group Headquarters — 40-acre waterfront campus on Elliott Bay, Seattle, WA">
+  </div>
+  <div class="cover-content">
+    <div class="cover-badge">Enterprise Opportunity Intelligence</div>
+    <h1 class="cover-title">Expedia Group:<br><span>The Opportunity</span></h1>
+    <p class="cover-subtitle">A comprehensive intelligence report analyzing Expedia Group's technology infrastructure, AI strategy, validated pain points, and strategic alignment with VAST Data's platform capabilities.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Prepared For</span>
+        <span class="cover-meta-value">Julia Kalez, VAST Data</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Prepared By</span>
+        <span class="cover-meta-value">JB, Founder &mdash; BestPaidRep.com</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Date</span>
+        <span class="cover-meta-value">February 2026</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Classification</span>
+        <span class="cover-meta-value">Confidential</span>
+      </div>
+    </div>
+    <div class="cover-bio">
+      <h4>About Expedia Group</h4>
+      <p>Expedia Group, Inc. (NASDAQ: <a href="https://finance.yahoo.com/quote/EXPE/" style="color:var(--accent)">EXPE</a>) is one of the world's largest online travel platforms, operating a portfolio of iconic brands including Expedia, Hotels.com, Vrbo, and a rapidly growing B2B division. Headquartered on a stunning 40-acre, 950,000-square-foot waterfront campus on Elliott Bay in Seattle, Washington, the company employs approximately 17,000 people worldwide. In fiscal year 2024, Expedia Group generated $13.7 billion in revenue, serving millions of travelers and thousands of supply partners across more than 200 countries. Under CEO Ariane Gorin, the company is undergoing a transformative shift from a traditional online travel agency to an AI-powered travel technology platform, with over 70 petabytes of data, 1,500+ AI agents, and partnerships with leading AI providers including OpenAI, Google, and Anthropic.</p>
+    </div>
+  </div>
+  <div class="cover-photo-credit">Photo: Expedia Group Seattle HQ Campus &mdash; ZGF Architects</div>
+</section>
+
+<!-- ==================== AUTHOR'S NOTE ==================== -->
+<section class="chapter" id="authors-note">
+  <div class="chapter-header">
+    <div class="chapter-number">From the Founder</div>
+    <h2 class="chapter-title">Author's Note</h2>
+    <p class="chapter-intro">Why this report exists, and why it matters.</p>
+  </div>
+
+  <img src="https://i.postimg.cc/gc2VTkM6/znw_Vkxg_KEze_Mq_Uum.jpg" alt="JB - Founder, BestPaidRep.com" class="author-photo">
+  <a href="https://johnkilakowske.com" target="_blank" class="author-photo-link">johnkilakowske.com</a>
+
+  <p>My name is JB, and I am the founder of <a href="https://bestpaidrep.com" target="_blank">BestPaidRep.com</a>. After more than 30 years as an enterprise account representative and manager in the corporate world, I retired in August 2023. But retirement did not mean slowing down. I immediately immersed myself in the rapidly evolving world of artificial intelligence, studying everything I could about the technology and staying at the forefront of the field as it developed at an extraordinary pace.</p>
+
+  <p>Four months ago, I launched BestPaidRep.com &mdash; an AI-native company dedicated to providing enterprise-grade business intelligence to sales professionals. My mission is simple: to give enterprise sales teams the kind of deep, actionable intelligence that used to take weeks of manual research, and deliver it in hours. I built this company on the foundation of three decades of domain expertise in enterprise sales, combined with a deep understanding of what AI can do when applied thoughtfully and rigorously.</p>
+
+  <p>This report was created specifically for <strong>Julia Kalez at VAST Data</strong>. Julia understands that in enterprise sales, the quality of your intelligence determines the quality of your conversations. This report is designed to arm her with the kind of deep, multi-dimensional insight into Expedia Group that transforms a cold outreach into a consultative, value-driven engagement.</p>
+
+  <p>Every data point, every pain point, every opportunity signal in this report has been researched, validated, and organized to tell a coherent story &mdash; the story of where Expedia Group is today, where they are heading, and precisely where VAST Data's capabilities align with their most pressing needs.</p>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== EXECUTIVE SUMMARY ==================== -->
+<section class="chapter" id="executive-summary">
+  <div class="chapter-header">
+    <div class="chapter-number">Executive Summary</div>
+    <h2 class="chapter-title">Why This Report Matters</h2>
+    <p class="chapter-intro">A concise overview of the opportunity and the credibility of AI-powered intelligence.</p>
+  </div>
+
+  <p>Expedia Group represents a compelling, high-value opportunity for VAST Data. This report consolidates intelligence gathered from SEC filings, earnings call transcripts, job postings, employee reviews, technology publications, competitive analysis, and executive profiling to present a 360-degree view of Expedia Group's data infrastructure landscape and strategic direction.</p>
+
+  <h3>The Opportunity at a Glance</h3>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value">70+ PB</div>
+      <div class="stat-label">Data Estate</div>
+      <div class="stat-change up">Confirmed by Chief Architect</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">$14.4B</div>
+      <div class="stat-label">TTM Revenue</div>
+      <div class="stat-change up">+9% YoY (Q3 2025)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">1,500+</div>
+      <div class="stat-label">AI Agents</div>
+      <div class="stat-change up">Built since Jan 2025</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">60+</div>
+      <div class="stat-label">LLMs in Production</div>
+      <div class="stat-change up">AI Playground Platform</div>
+    </div>
+  </div>
+
+  <p>Expedia Group is in the midst of a profound technology transformation. They are consolidating 21 legacy platform stacks into one unified architecture, migrating to a data mesh model, and investing aggressively in AI across every dimension of their business. Their 70+ petabyte data estate, confirmed by their SVP &amp; Chief Architect Rajesh Naidu <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a>, is growing rapidly as AI workloads proliferate. The company has deployed over 1,500 AI agents since January 2025 and operates an AI Playground with access to more than 60 large language models <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a>.</p>
+
+  <p>At the same time, Expedia faces significant infrastructure challenges: data silos from years of acquisitions, cross-region data access bottlenecks, escalating egress costs, and the complexity of managing a fragmented technology ecosystem. These are precisely the problems that VAST Data's unified data platform is designed to solve.</p>
+
+  <h3>A Note on AI-Generated Intelligence</h3>
+
+  <div class="card card-accent">
+    <h4>Why AI-Powered Research Is Credible</h4>
+    <p>This report was assembled using AI-powered research tools &mdash; and that is a feature, not a limitation. Here is why:</p>
+    <p><strong>Breadth of coverage:</strong> AI can simultaneously analyze SEC filings, earnings transcripts, job postings, employee reviews, technology publications, news articles, and competitive intelligence in a fraction of the time it would take a human analyst. This report draws from over 25 distinct sources across multiple research channels.</p>
+    <p><strong>Transparency through citations:</strong> Every significant claim in this report is linked to its source. Clickable citations are provided throughout so that every finding can be independently verified. This is not opinion &mdash; it is sourced intelligence.</p>
+    <p><strong>Domain expertise in the loop:</strong> While AI conducted the research, the framework, the questions asked, the analysis structure, and the strategic interpretation were all guided by 30+ years of enterprise sales experience. AI is the engine; domain expertise is the driver.</p>
+    <p><strong>Recency and relevance:</strong> AI research tools can access the most current information available, including Q3 2025 earnings data, January 2026 CTO interviews, and real-time job postings. This report reflects the state of Expedia Group as of February 2026.</p>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 1: COMPANY OVERVIEW ==================== -->
+<section class="chapter" id="chapter1">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 1</div>
+    <h2 class="chapter-title">Company Overview &amp; Financial Profile</h2>
+    <p class="chapter-intro">A financial and strategic snapshot of Expedia Group, one of the world's largest online travel platforms.</p>
+  </div>
+
+  <h3>Corporate Snapshot</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Attribute</th><th>Detail</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Company Name</strong></td><td>Expedia Group, Inc.</td></tr>
+      <tr><td><strong>Ticker</strong></td><td>EXPE (NASDAQ)</td></tr>
+      <tr><td><strong>Headquarters</strong></td><td>1111 Expedia Group Way W, Seattle, WA 98119</td></tr>
+      <tr><td><strong>CEO</strong></td><td>Ariane Gorin (since May 2024)</td></tr>
+      <tr><td><strong>CTO</strong></td><td>Ramana Thumu (since late 2024)</td></tr>
+      <tr><td><strong>CFO</strong></td><td>Scott Schenkel (since early 2025)</td></tr>
+      <tr><td><strong>Employees</strong></td><td>~17,100 worldwide</td></tr>
+      <tr><td><strong>Brands</strong></td><td>Expedia, Hotels.com, Vrbo, B2B (Private Label Solutions), Expedia Group Advertising</td></tr>
+      <tr><td><strong>2024 Annual Revenue</strong></td><td>$13.691 billion (+6.7% YoY)</td></tr>
+      <tr><td><strong>TTM Revenue (Sep 2025)</strong></td><td>~$14.37 billion</td></tr>
+    </tbody>
+  </table>
+
+  <p>Source: <a href="https://s202.q4cdn.com/757635260/files/doc_financials/2024/ar/EXPE2024ARS-FILED.pdf" target="_blank">Expedia Group 2024 Annual Report (SEC Filing)</a></p>
+
+  <h3>Q3 2025 Financial Highlights</h3>
+
+  <p>Expedia Group delivered a strong third quarter in 2025, exceeding expectations on both revenue and profitability. The results reflect an improved demand environment, disciplined execution, and tangible progress on the company's strategic priorities <a href="https://s202.q4cdn.com/757635260/files/doc_financials/2025/q1/EXPE-USQ_Transcript_2025-05-08.pdf" target="_blank">[3]</a>.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value">$4.41B</div>
+      <div class="stat-label">Revenue</div>
+      <div class="stat-change up">+9% YoY</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">$30.7B</div>
+      <div class="stat-label">Gross Bookings</div>
+      <div class="stat-change up">+12% YoY</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">108.2M</div>
+      <div class="stat-label">Room Nights</div>
+      <div class="stat-change up">+11% YoY</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">$7.33</div>
+      <div class="stat-label">Diluted EPS</div>
+      <div class="stat-change up">+45% YoY</div>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Metric</th><th>Q3 2025</th><th>YoY Change</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Revenue</td><td>$4,412M</td><td>+9%</td></tr>
+      <tr><td>Gross Bookings</td><td>$30,727M</td><td>+12%</td></tr>
+      <tr><td>Booked Room Nights</td><td>108.2M</td><td>+11%</td></tr>
+      <tr><td>Operating Income</td><td>$1,036M</td><td>+36%</td></tr>
+      <tr><td>Net Income</td><td>$959M</td><td>+40%</td></tr>
+      <tr><td>Diluted EPS</td><td>$7.33</td><td>+45%</td></tr>
+      <tr><td>Adjusted EBITDA</td><td>$1,449M</td><td>+16%</td></tr>
+      <tr><td>EBITDA Margin Expansion</td><td colspan="2">+208 basis points</td></tr>
+      <tr><td>Share Repurchases (9 months)</td><td colspan="2">$1.4 billion</td></tr>
+    </tbody>
+  </table>
+
+  <p>Source: <a href="https://s202.q4cdn.com/757635260/files/doc_financials/2025/q1/EXPE-USQ_Transcript_2025-05-08.pdf" target="_blank">Expedia Group Q1 2025 Earnings Call Transcript</a></p>
+
+  <h3>FY2025 Guidance (Raised November 2025)</h3>
+
+  <div class="card card-success">
+    <p>Expedia raised its full-year 2025 guidance in November, signaling confidence in its strategic execution:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Metric</th><th>Previous Guidance</th><th>Updated Guidance</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Gross Bookings Growth</td><td>3&ndash;5%</td><td><strong>7%</strong></td></tr>
+        <tr><td>Revenue Growth</td><td>3&ndash;5%</td><td><strong>6&ndash;7%</strong></td></tr>
+        <tr><td>Adjusted EBITDA Margin Expansion</td><td>1%</td><td><strong>2%</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="quote-block">
+    <p>Our strong third quarter results exceeded both our top and bottom-line expectations, reflecting an improved demand environment, disciplined execution and tangible progress on our strategic priorities.</p>
+    <span class="quote-source">&mdash; Ariane Gorin, CEO, Expedia Group</span>
+  </div>
+
+  <h3>Key Strategic Themes</h3>
+
+  <p>Several strategic themes emerge from Expedia's recent financial disclosures and public statements that are directly relevant to a VAST Data engagement:</p>
+
+  <div class="card card-primary">
+    <h4>B2B as the Growth Engine</h4>
+    <p>Expedia's B2B segment is growing at 18&ndash;26% year-over-year &mdash; approximately twice the rate of its consumer business. This segment, led by President Alfonso Paredes, is rapidly expanding through new API integrations for cars, vacation rentals, flights, and the recent acquisition of Tiqets. This growth creates acute data infrastructure demands for partner integrations, API performance, and data isolation between consumer and B2B workloads. <a href="https://partner.expediagroup.com/en-us/resources/blog/building-next-generation-of-b2b-travel-technology" target="_blank">[4]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Platform Consolidation</h4>
+    <p>Expedia has consolidated 21 disparate platform stacks into a single unified platform and reduced 9 separate ML platforms to 1. This consolidation drive, which began in 2020, reflects a commitment to reducing complexity and improving efficiency. It also signals an openness to unified infrastructure solutions. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>AI-First Transformation</h4>
+    <p>Under CTO Ramana Thumu, Expedia is pursuing an aggressive AI strategy that spans internal productivity, customer-facing agentic AI, and data infrastructure modernization. The company has deployed 1,500+ AI agents, operates an AI Playground with 60+ LLMs, and has established partnerships with OpenAI, Google, and Anthropic. <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Margin Expansion &amp; Cost Optimization</h4>
+    <p>New CFO Scott Schenkel is focused on margin expansion (208 basis points in Q3 2025) and aggressive share buybacks ($1.4 billion in 9 months). This cost-consciousness makes Expedia receptive to solutions that can reduce total cost of ownership while improving performance &mdash; a core VAST Data value proposition.</p>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 2: EXECUTIVE LEADERSHIP ==================== -->
+<section class="chapter" id="chapter2">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 2</div>
+    <h2 class="chapter-title">Executive Leadership &amp; Decision-Makers</h2>
+    <p class="chapter-intro">Understanding who makes the technology and infrastructure decisions at Expedia Group.</p>
+  </div>
+
+  <h3>Executive Leadership Team</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Role</th><th>Name</th><th>Key Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Chairman</strong></td><td>Barry Diller</td><td>Long-time media mogul, IAC/InterActiveCorp</td></tr>
+      <tr><td><strong>CEO</strong></td><td>Ariane Gorin</td><td>Since May 2024; $25.08M total compensation</td></tr>
+      <tr><td><strong>CFO</strong></td><td>Scott Schenkel</td><td>Since early 2025; former interim CEO at eBay</td></tr>
+      <tr><td><strong>CTO</strong></td><td>Ramana Thumu</td><td>Since late 2024; previously decade at Fanatics</td></tr>
+      <tr><td><strong>Chief Legal &amp; People Officer</strong></td><td>Robert Dzielak</td><td>Also Corporate Secretary</td></tr>
+      <tr><td><strong>Chief Strategy Officer</strong></td><td>Eric Hart</td><td>Business &amp; corporate development</td></tr>
+      <tr><td><strong>CMO</strong></td><td>Jochen Koedijk</td><td>Marketing leadership</td></tr>
+      <tr><td><strong>President, B2B</strong></td><td>Alfonso Paredes</td><td>Leads fastest-growing segment (18&ndash;26% growth)</td></tr>
+      <tr><td><strong>Chief Product Officer</strong></td><td>Shilpa Ranganathan</td><td>Product strategy across all brands</td></tr>
+      <tr><td><strong>Chief Commercial Officer</strong></td><td>Greg Schulze</td><td>Commercial operations</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Board of Directors (Notable Members)</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Name</th><th>Affiliation</th><th>Relevance</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Barry Diller</strong></td><td>Chairman</td><td>Long-term strategic direction</td></tr>
+      <tr><td><strong>Dara Khosrowshahi</strong></td><td>CEO, Uber</td><td>Former Expedia CEO; technology perspective</td></tr>
+      <tr><td><strong>Alexandr Wang</strong></td><td>Founder/CEO, Scale AI</td><td><strong>Strong AI commitment signal at governance level</strong></td></tr>
+      <tr><td><strong>Chelsea Clinton</strong></td><td>Vice Chair, Clinton Foundation</td><td>Public policy and governance</td></tr>
+      <tr><td><strong>Henrique Dubugras</strong></td><td>Co-CEO/Founder, Brex</td><td>Fintech and technology perspective</td></tr>
+      <tr><td><strong>Beverly Anderson</strong></td><td>CEO, BECU</td><td>Financial services perspective</td></tr>
+    </tbody>
+  </table>
+
+  <p>The presence of <strong>Alexandr Wang</strong>, founder and CEO of Scale AI, on Expedia's board is a particularly significant signal. Scale AI is one of the most prominent AI data labeling and infrastructure companies in the world. His board seat underscores Expedia's commitment to AI at the highest governance level.</p>
+
+  <h3>Key Decision-Maker Profiles</h3>
+
+  <div class="exec-grid">
+
+    <!-- CTO -->
+    <div class="exec-card">
+      <div class="exec-photo-area">
+        <div class="exec-initials"><a href="https://www.linkedin.com/in/ramanathumu/" target="_blank" title="View Ramana Thumu's Profile"><img src="https://i.postimg.cc/TGdJwCTS/HNBMc-Bz-Aojgl-Hu-OK.jpg" alt="Ramana Thumu"></a></div>
+        <h4><a href="https://www.linkedin.com/in/ramanathumu/" target="_blank" style="color:white; text-decoration:none;">Ramana Thumu</a></h4>
+        <span class="exec-role">Chief Technology Officer</span>
+      </div>
+      <div class="exec-details-area">
+        <h5>Background</h5>
+        <p>Joined Expedia in October 2024 after spending a decade in technology leadership at Fanatics. As CTO, Thumu oversees engineering, data, AI, cloud platforms, and security &mdash; making him the <strong>primary technical buyer</strong> for data infrastructure investments.</p>
+        <h5>Key Initiatives</h5>
+        <p>Thumu has championed the "democratization of AI across the entire company," launching the AI Playground (60+ LLMs), enabling 1,500+ AI agents with ~6,000 monthly sessions, and deploying AI coding assistants to two-thirds of the developer workforce for a ~20% productivity lift. He has also established AI Squads &mdash; teams of 4&ndash;6 AI engineers embedded across legal, procurement, HR, and marketing.</p>
+        <div class="exec-strategy-box">
+          <h6>VAST Data Engagement Strategy</h6>
+          <p>Primary technical decision-maker. Engage on data infrastructure modernization, AI workload performance, and platform consolidation. His focus on "data infrastructure" as a core AI priority is a direct opening for VAST. <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CEO -->
+    <div class="exec-card">
+      <div class="exec-photo-area">
+        <div class="exec-initials"><a href="https://www.expediagroup.com/who-we-are/leadership/ariane-gorin/default.aspx" target="_blank" title="View Ariane Gorin's Bio"><img src="https://i.postimg.cc/0xk0Qc82/IJu_Uy_SGFn_YIewob_Y.jpg" alt="Ariane Gorin"></a></div>
+        <h4><a href="https://www.expediagroup.com/who-we-are/leadership/ariane-gorin/default.aspx" target="_blank" style="color:white; text-decoration:none;">Ariane Gorin</a></h4>
+        <span class="exec-role">Chief Executive Officer</span>
+      </div>
+      <div class="exec-details-area">
+        <h5>Background</h5>
+        <p>Appointed CEO in May 2024 after serving as a board member since February 2024. Gorin has driven a strategic pivot toward a "two-sided marketplace" model, emphasizing B2B growth, AI-first transformation, and platform consolidation. Her total compensation of $25.08M reflects the board's confidence in her leadership.</p>
+        <h5>Strategic Vision</h5>
+        <p>Gorin has stated that "2026 will be very big" for travel, and has raised FY2025 guidance twice, signaling strong execution. She is focused on transforming Expedia from a traditional OTA into a comprehensive travel technology platform.</p>
+        <div class="exec-strategy-box">
+          <h6>VAST Data Engagement Strategy</h6>
+          <p>Executive sponsor for major platform investments. Engage through the lens of competitive differentiation and AI-powered innovation. Her "two-sided marketplace" vision requires a robust data foundation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CFO -->
+    <div class="exec-card">
+      <div class="exec-photo-area">
+        <div class="exec-initials"><a href="https://www.expediagroup.com/who-we-are/leadership/scott-schenkel/default.aspx" target="_blank" title="View Scott Schenkel's Bio"><img src="https://i.postimg.cc/JmpcBZnD/Ewei-KBDNt-Kyzeiny.jpg" alt="Scott Schenkel"></a></div>
+        <h4><a href="https://www.expediagroup.com/who-we-are/leadership/scott-schenkel/default.aspx" target="_blank" style="color:white; text-decoration:none;">Scott Schenkel</a></h4>
+        <span class="exec-role">Chief Financial Officer</span>
+      </div>
+      <div class="exec-details-area">
+        <h5>Background</h5>
+        <p>Joined Expedia in early 2025, bringing experience as interim CEO and CFO at eBay. Schenkel is focused on margin expansion (achieving 208 basis points of EBITDA margin improvement in Q3 2025) and aggressive capital returns ($1.4 billion in share repurchases over 9 months).</p>
+        <div class="exec-strategy-box">
+          <h6>VAST Data Engagement Strategy</h6>
+          <p>Budget authority and ROI-focused buyer. Lead with total cost of ownership reduction, operational efficiency gains, and the financial case for consolidating fragmented storage infrastructure onto VAST's unified platform.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- B2B President -->
+    <div class="exec-card">
+      <div class="exec-photo-area">
+        <div class="exec-initials"><a href="https://www.expediagroup.com/who-we-are/leadership/alfonso-paredes/default.aspx" target="_blank" title="View Alfonso Paredes' Bio"><img src="https://i.postimg.cc/6tTVVq2r/k_CVxj_Zjzl_FVWd_NLn.jpg" alt="Alfonso Paredes"></a></div>
+        <h4><a href="https://www.expediagroup.com/who-we-are/leadership/alfonso-paredes/default.aspx" target="_blank" style="color:white; text-decoration:none;">Alfonso Paredes</a></h4>
+        <span class="exec-role">President, B2B</span>
+      </div>
+      <div class="exec-details-area">
+        <h5>Background</h5>
+        <p>Leads Expedia's fastest-growing segment, with B2B revenue growing at 18&ndash;26% year-over-year &mdash; approximately twice the rate of the consumer business. The B2B division powers partner integrations through APIs for hotels, flights, cars, vacation rentals, and the recently acquired Tiqets activities platform.</p>
+        <div class="exec-strategy-box">
+          <h6>VAST Data Engagement Strategy</h6>
+          <p>B2B data infrastructure needs are acute. The rapid growth of partner integrations demands scalable, high-performance data infrastructure with strong multi-tenancy and data isolation capabilities. <a href="https://partner.expediagroup.com/en-us/resources/blog/building-next-generation-of-b2b-travel-technology" target="_blank">[4]</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chief Architect -->
+    <div class="exec-card">
+      <div class="exec-photo-area">
+        <div class="exec-initials"><a href="https://www.linkedin.com/in/rajeshnaidu/" target="_blank" title="View Rajesh Naidu's Profile"><img src="https://i.postimg.cc/5bj55yYD/CKk-Cegnsi-Ncpx-EJi.jpg" alt="Rajesh Naidu"></a></div>
+        <h4><a href="https://www.linkedin.com/in/rajeshnaidu/" target="_blank" style="color:white; text-decoration:none;">Rajesh Naidu</a></h4>
+        <span class="exec-role">SVP &amp; Chief Architect</span>
+      </div>
+      <div class="exec-details-area">
+        <h5>Background</h5>
+        <p>Reports to the CTO and is responsible for Expedia's technology infrastructure platform. Naidu is the source of the confirmed "70+ petabytes of data" figure and has spoken publicly about the company's data infrastructure challenges, including data observability, pipeline reliability, and the complexity of managing data acquired through years of acquisitions.</p>
+        <div class="exec-strategy-box">
+          <h6>VAST Data Engagement Strategy</h6>
+          <p>Critical technical influencer for data infrastructure decisions. Engage on the specific challenges he has articulated publicly: data pipeline observability, cross-region data access, and unified storage for a 70+ PB data estate. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 3: TECHNOLOGY INFRASTRUCTURE ==================== -->
+<section class="chapter" id="chapter3">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 3</div>
+    <h2 class="chapter-title">Technology Infrastructure &amp; Data Architecture</h2>
+    <p class="chapter-intro">A detailed analysis of Expedia Group's confirmed technology stack, cloud infrastructure, and data management strategy.</p>
+  </div>
+
+  <h3>The 70-Petabyte Data Estate</h3>
+
+  <div class="quote-block">
+    <p>We have more than 70 petabytes of data that we have acquired over the years.</p>
+    <span class="quote-source">&mdash; Rajesh Naidu, SVP &amp; Chief Architect, Expedia Group <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank" style="color:var(--accent-light)">[1]</a></span>
+  </div>
+
+  <p>Expedia Group manages one of the largest data estates in the online travel industry. This 70+ petabyte repository has been accumulated through years of organic growth and acquisitions, and it continues to expand as AI workloads generate new data at an accelerating rate. The sheer scale of this data estate &mdash; combined with the complexity of managing it across multiple regions, brands, and business units &mdash; creates both significant challenges and a compelling opportunity for a unified, high-performance data platform.</p>
+
+  <h3>Confirmed Technology Stack</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Category</th><th>Technology</th><th>Status / Source</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Primary Cloud</strong></td><td>Amazon Web Services (AWS)</td><td>Since 2012, dominant provider <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></td></tr>
+      <tr><td><strong>Data Volume</strong></td><td>70+ Petabytes</td><td>Confirmed by Chief Architect <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></td></tr>
+      <tr><td><strong>ML Platform</strong></td><td>Unified (consolidated from 9 separate)</td><td>Active consolidation initiative</td></tr>
+      <tr><td><strong>Data Lakehouse</strong></td><td>Apache Iceberg / Hive</td><td>Job postings confirm <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></td></tr>
+      <tr><td><strong>Stream Processing</strong></td><td>Apache Kafka</td><td>Job postings confirm <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></td></tr>
+      <tr><td><strong>Batch Processing</strong></td><td>Apache Spark</td><td>Job postings confirm <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></td></tr>
+      <tr><td><strong>Orchestration</strong></td><td>Apache Airflow</td><td>Job postings confirm <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></td></tr>
+      <tr><td><strong>ML/AI Platform</strong></td><td>Databricks, AWS SageMaker</td><td>Confirmed via Databricks blog <a href="https://www.databricks.com/blog" target="_blank">[6]</a></td></tr>
+      <tr><td><strong>Container Orchestration</strong></td><td>Kubernetes</td><td>Job postings confirm <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></td></tr>
+      <tr><td><strong>ERP</strong></td><td>Oracle</td><td>On-premises data center</td></tr>
+      <tr><td><strong>CRM</strong></td><td>Salesforce</td><td>Being consolidated across brands</td></tr>
+      <tr><td><strong>AI/LLM</strong></td><td>OpenAI, Google Gemini, Meta Llama, Anthropic Claude</td><td>60+ LLMs in AI Playground <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a></td></tr>
+      <tr><td><strong>Data Observability</strong></td><td>Active investment</td><td>Ongoing initiative <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></td></tr>
+      <tr><td><strong>DBaaS</strong></td><td>Cerebro (built on AWS)</td><td>Internal platform</td></tr>
+      <tr><td><strong>Data Federation</strong></td><td>Alluxio</td><td>Cross-region data lake federation <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">[7]</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Data Architecture: The Move to Data Mesh</h3>
+
+  <p>Expedia Group is transitioning from a centralized data lake architecture to a <strong>data mesh</strong> model. This strategic shift is designed to address the data silos that have accumulated through years of operating multiple independent brands. The company is using <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">Alluxio for federating cross-region data lakes</a>, enabling unified access to data regardless of its physical location. This approach aims to mitigate the challenges of performance degradation and high egress costs associated with cross-region data access <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">[7]</a>.</p>
+
+  <p>Previously, Expedia relied on data replication using tools like <strong>Circus Train</strong> for cross-region data access and <strong>Waggle Dance</strong> for Hive metastore federation. This approach proved costly, error-prone, and created delays in data availability along with a high operational burden for data validation and synchronization.</p>
+
+  <h3>Platform Consolidation: From 21 to 1</h3>
+
+  <p>One of the most significant technology initiatives at Expedia has been the consolidation of <strong>21 disparate platform stacks into a single unified platform</strong>. This initiative, which commenced in 2020, was driven by the need to reduce complexity and improve efficiency across its portfolio of brands. The company has also consolidated <strong>9 separate ML platforms into 1</strong>, streamlining its machine learning infrastructure. These consolidation efforts demonstrate a clear organizational appetite for unified, simplified infrastructure solutions <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a>.</p>
+
+  <h3>Cloud Infrastructure Profile</h3>
+
+  <div class="card card-primary">
+    <p>Expedia has been an <strong>AWS customer since 2012</strong>, and AWS remains the dominant cloud provider with only a "small presence" from other providers. The company still operates an on-premises data center for its Oracle ERP system. Key AWS services in use include:</p>
+    <p><strong>Amazon S3</strong> &mdash; Foundation of the main data lake<br>
+    <strong>Amazon SageMaker</strong> &mdash; Machine learning model training and deployment<br>
+    <strong>AWS Service Catalog</strong> &mdash; Powers the Cerebro DBaaS platform<br>
+    <strong>Amazon Aurora</strong> &mdash; Database migration target (replacing legacy systems)<br>
+    <strong>AWS (general)</strong> &mdash; AI customer service agent infrastructure</p>
+  </div>
+
+  <h3>Data Volume Indicators</h3>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value">70+ PB</div>
+      <div class="stat-label">Total Data Estate</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">143M</div>
+      <div class="stat-label">AI Conversations/Year</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">108M+</div>
+      <div class="stat-label">Room Nights/Quarter</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">$30B+</div>
+      <div class="stat-label">Gross Bookings/Quarter</div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>If everything else is running like a well-oiled machine, it's then going to come down to the pipeline and whether the information is flowing from point A to point B.</p>
+    <span class="quote-source">&mdash; Rajesh Naidu, SVP &amp; Chief Architect, Expedia Group <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank" style="color:var(--accent-light)">[1]</a></span>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 4: AI & INNOVATION STRATEGY ==================== -->
+<section class="chapter" id="chapter4">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 4</div>
+    <h2 class="chapter-title">AI &amp; Innovation Strategy</h2>
+    <p class="chapter-intro">How Expedia Group is deploying artificial intelligence across every dimension of its business.</p>
+  </div>
+
+  <p>Under CTO Ramana Thumu, Expedia Group has embarked on one of the most ambitious AI strategies in the travel industry. The company's approach is not limited to customer-facing chatbots; it encompasses internal productivity, customer experience, developer tools, and foundational data infrastructure. As Thumu stated in a January 2026 interview with Fortune, the goal is to "democratize AI across the entire company" <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a>.</p>
+
+  <h3>AI Playground: 60+ LLMs at Scale</h3>
+
+  <p>Since January 2025, Expedia has operated an internal <strong>AI Playground</strong> that provides employees access to more than 60 large language models, including offerings from OpenAI, Google Gemini, Meta Llama, and Anthropic Claude. This platform has enabled employees to build over <strong>1,500 AI agents</strong> that collectively handle approximately 6,000 monthly sessions. The breadth of LLM access and the volume of agent deployments underscore the massive data throughput requirements of Expedia's AI infrastructure <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a>.</p>
+
+  <h3>AI Initiatives Overview</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Initiative</th><th>Description</th><th>Scale / Impact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>AI Playground</strong></td><td>Internal platform with access to 60+ LLMs</td><td>1,500+ agents, ~6,000 monthly sessions</td></tr>
+      <tr><td><strong>AI Coding Assistants</strong></td><td>Copilot, Claude Code, Cursor deployed to developers</td><td>2/3 of dev workforce, ~20% productivity lift</td></tr>
+      <tr><td><strong>AI Squads</strong></td><td>Teams of 4&ndash;6 AI engineers embedded across departments</td><td>Legal, procurement, HR, marketing</td></tr>
+      <tr><td><strong>AI Customer Service Agent</strong></td><td>Built on AWS, handles traveler queries</td><td>143M conversations/year, 50%+ resolution rate</td></tr>
+      <tr><td><strong>Expedia Trip Matching</strong></td><td>AI-powered itinerary generation from Instagram reels</td><td>Launched June 2025</td></tr>
+      <tr><td><strong>ChatGPT Integration</strong></td><td>Pilot partner for apps in ChatGPT</td><td>Alongside Booking.com, Zillow, Spotify (Oct 2025)</td></tr>
+      <tr><td><strong>Agentic AI Vision</strong></td><td>Building unified "one agentic experience" across touchpoints</td><td>Strategic priority for 2026</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Core AI Priorities (per CTO)</h3>
+
+  <p>In his Fortune interview, CTO Ramana Thumu outlined four core AI priorities for Expedia Group <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a>:</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value" style="font-size:1.2rem;">Internal Productivity</div>
+      <div class="stat-label">AI-powered developer tools and cross-functional automation</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="font-size:1.2rem;">Customer-Facing AI</div>
+      <div class="stat-label">Multi-step agentic AI for travelers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="font-size:1.2rem;">Data Infrastructure</div>
+      <div class="stat-label">Foundation for AI workloads at scale</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="font-size:1.2rem;">Partner Support</div>
+      <div class="stat-label">Collaboration with LLM providers</div>
+    </div>
+  </div>
+
+  <p>The explicit mention of <strong>"data infrastructure"</strong> as one of only four core AI priorities is a direct signal that Expedia recognizes the foundational importance of its data platform in enabling AI at scale. This is precisely the conversation that VAST Data should be having with Expedia's technology leadership.</p>
+
+  <h3>The Competitive Imperative</h3>
+
+  <div class="card card-danger">
+    <h4>Existential AI Threat to Online Travel Agencies</h4>
+    <p>A January 2026 Harvard Business Review article titled <strong>"Gen AI Is Threatening the Platforms That Dominate Online Travel"</strong> warned that AI agents can bypass OTAs entirely, booking directly with hotels and airlines. This creates existential urgency for Expedia to invest in AI infrastructure to remain competitive. The company that builds the most capable AI-powered travel platform will win; the company that doesn't will be disintermediated.</p>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 5: VALIDATED PAIN POINTS ==================== -->
+<section class="chapter" id="chapter5">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 5</div>
+    <h2 class="chapter-title">Validated Pain Points &amp; Opportunity Signals</h2>
+    <p class="chapter-intro">Infrastructure challenges identified through SEC filings, technical publications, employee reviews, job postings, and executive statements.</p>
+  </div>
+
+  <p>The following pain points have been identified and validated through multiple independent research channels. Each represents a genuine infrastructure challenge that Expedia Group is facing &mdash; and each aligns with a specific capability of the VAST Data platform.</p>
+
+  <div class="pain-grid">
+
+    <div class="pain-card">
+      <span class="severity-badge critical">Critical</span>
+      <h4>Data Silos from Acquisitions</h4>
+      <p>Years of operating multiple independent brands (Expedia, Hotels.com, Vrbo, Orbitz, Travelocity) have created deeply entrenched data silos. The recent acquisition of Tiqets will add yet another data source to integrate. The company's stated goal of a "unified API architecture" and "more connected platform" confirms this is an active challenge. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> Unified data platform consolidates fragmented data across acquisitions into a single namespace, eliminating silos without data migration.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge critical">Critical</span>
+      <h4>Cross-Region Data Access Bottlenecks</h4>
+      <p>With a global presence spanning multiple AWS regions, accessing data across geographical boundaries has caused performance degradation and substantial egress costs. Expedia's adoption of Alluxio for cross-region data federation confirms this is a significant operational pain point. Previous approaches using Circus Train for data replication proved costly and error-prone. <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">[7]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's global namespace and data fabric capabilities provide unified cross-region data access without replication, reducing egress costs and latency.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge high">High</span>
+      <h4>AI/ML Infrastructure Scalability</h4>
+      <p>Expedia's ambitious AI initiatives &mdash; 1,500+ agents, 60+ LLMs, 143M AI conversations per year &mdash; are generating and processing massive volumes of data. The CTO's stated desire to "move faster" suggests that current infrastructure may be a bottleneck for training, deploying, and managing AI/ML models at the required scale. <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's AI Operating System is purpose-built for high-throughput, low-latency AI/ML workloads, from data preparation through model training and inference.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge high">High</span>
+      <h4>Legacy Architecture &amp; Technical Debt</h4>
+      <p>Despite significant consolidation progress (21 platforms to 1), employee reviews describe the technology stack as a "nightmare" in some areas, while others praise a "modern tech stack" &mdash; suggesting that legacy systems and technical debt remain in parts of the organization. The on-premises Oracle ERP data center is a concrete example. <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Reviews-E9876.htm" target="_blank">[8]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's platform can serve as the modern data layer that bridges legacy and modern systems, providing a unified interface regardless of data source.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge high">High</span>
+      <h4>API Performance &amp; Stability at Scale</h4>
+      <p>As Expedia rapidly expands its B2B API ecosystem (cars, vacation rentals, flights, activities via Tiqets), there is a concurrent emphasis on the need to "enhance API performance and stability." This suggests that maintaining consistent high performance and reliability is a growing challenge as the platform scales. <a href="https://partner.expediagroup.com/en-us/resources/blog/building-next-generation-of-b2b-travel-technology" target="_blank">[4]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's all-flash architecture delivers the low-latency data access required to ensure reliability and scalability of Expedia's growing API ecosystem.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge medium">Medium</span>
+      <h4>Data Pipeline Reliability</h4>
+      <p>The SVP &amp; Chief Architect has spoken publicly about investing in data observability, noting that pricing errors were caused by "bad data flowing through pipelines." This indicates that data pipeline reliability is an active concern with direct business impact. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's data management capabilities, including quality of service features and simplified pipeline architecture, reduce the risk of data quality issues.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge medium">Medium</span>
+      <h4>Developer Cognitive Load</h4>
+      <p>The sheer complexity of Expedia's technology stack &mdash; encompassing Spark, Kafka, Hive/Iceberg, Airflow, Kubernetes, SageMaker, Databricks, Alluxio, and dozens of other tools &mdash; places a significant cognitive load on developers. Job postings require experience with an extensive list of technologies, suggesting that navigating this ecosystem is a real challenge. <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's unified platform reduces the number of point solutions developers must manage, simplifying the data infrastructure and freeing engineering resources for innovation.</div>
+    </div>
+
+    <div class="pain-card">
+      <span class="severity-badge medium">Medium</span>
+      <h4>Consumer/B2B Data Separation</h4>
+      <p>Expedia must architect guardrails to prevent data mixing between consumer and B2B workloads while enabling back-end analytics across both. This is a complex data governance challenge that grows more acute as the B2B segment scales. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+      <div class="vast-solution"><strong>VAST Solution:</strong> VAST's multi-tenancy and data governance features provide the isolation and access controls needed to separate consumer and B2B data while maintaining unified analytics.</div>
+    </div>
+
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 6: EMPLOYEE & CULTURAL INTEL ==================== -->
+<section class="chapter" id="chapter6">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 6</div>
+    <h2 class="chapter-title">Employee Sentiment &amp; Cultural Intelligence</h2>
+    <p class="chapter-intro">Insights from Glassdoor, Blind, Reddit, and Hacker News that reveal the internal reality of Expedia's technology organization.</p>
+  </div>
+
+  <p>Employee sentiment data provides a valuable, unfiltered view into the internal dynamics of a target account. The following insights were gathered from Glassdoor reviews, Blind posts, Reddit discussions, and Hacker News threads. They reveal both strengths and vulnerabilities that are relevant to a VAST Data engagement strategy.</p>
+
+  <h3>Glassdoor &amp; Blind: Overall Sentiment</h3>
+
+  <p>Expedia Group is generally well-regarded by its employees, as evidenced by its inclusion in <strong>Glassdoor's "Best Places to Work in 2024"</strong>. Data Engineers, in particular, rate the company highly at 4.2 out of 5, with 93% saying they would recommend it to a friend. However, beneath this positive surface, several recurring themes emerge that are directly relevant to understanding the technology organization's dynamics <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Reviews-E9876.htm" target="_blank">[8]</a>.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Theme</th><th>Sentiment</th><th>Relevance to VAST Data</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Data Engineer satisfaction</td><td>Positive (4.2/5, 93% recommend)</td><td>Strong data culture; receptive audience for data platform conversations</td></tr>
+      <tr><td>Leadership communication</td><td>Mixed &mdash; "Executive teams that don't listen"</td><td>Champions at the technical level may need to build internal cases</td></tr>
+      <tr><td>Career progression</td><td>Negative &mdash; slow advancement, limited salary growth</td><td>Potential attrition of skilled technical staff; efficiency tools valued</td></tr>
+      <tr><td>Technology stack</td><td>Mixed &mdash; "Modern tech stack" vs. "nightmare"</td><td>Confirms ongoing modernization with legacy pockets remaining</td></tr>
+      <tr><td>Work-life balance</td><td>Positive &mdash; "relaxed" engineering culture</td><td>Engineers have bandwidth to evaluate and champion new solutions</td></tr>
+      <tr><td>Reorganizations</td><td>Negative &mdash; frequent restructuring</td><td>Decision-making may shift; identify stable technical champions</td></tr>
+    </tbody>
+  </table>
+
+  <p>Source: <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Reviews-E9876.htm" target="_blank">Glassdoor &mdash; Expedia Group Reviews</a>, <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Data-Engineer-Reviews-EI_IE9876.0,13_KO14,27.htm" target="_blank">Glassdoor &mdash; Data Engineer Reviews</a></p>
+
+  <h3>Reddit &amp; Hacker News: Engineering Culture</h3>
+
+  <p>Discussions on Reddit and Hacker News provide additional context about Expedia's engineering culture and technology decisions. Key themes include:</p>
+
+  <div class="card card-primary">
+    <h4>Hybrid Cloud Complexity</h4>
+    <p>Expedia utilizes a hybrid cloud infrastructure, combining its own data centers with AWS. Managing this hybrid environment leads to data management and integration challenges that a unified platform could address. <a href="https://www.reddit.com/r/AMA/comments/f0mwx1/software_engineer_at_expedia_group/" target="_blank">[9]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Post-Layoff Efficiency Drive</h4>
+    <p>Expedia eliminated approximately 1,500 jobs in early 2024. The CEO's statement that the layoffs were a result of "technical achievements" was met with criticism in the developer community. Following these cuts, the company is under pressure to improve operational efficiency with fewer resources &mdash; making simplified, high-performance infrastructure solutions particularly attractive. <a href="https://news.ycombinator.com/item?id=39518590" target="_blank">[10]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Technology Stack Insights</h4>
+    <p>The backend is primarily built on the Java Virtual Machine (JVM) with Spring Boot for microservices. Kotlin has emerged as the preferred language for new services, especially GraphQL APIs. Python is used extensively for machine learning. React powers the frontend, while Kotlin and Swift are used for mobile development. <a href="https://kotlinlang.org/lp/server-side/case-studies/expedia/" target="_blank">[11]</a></p>
+  </div>
+
+  <h3>Job Postings: What They're Building</h3>
+
+  <p>An analysis of current Expedia Group job postings reveals significant investment in data and AI capabilities. The company is actively hiring for data engineers, ML Ops engineers, and platform engineers to build a <strong>"Competitive Intelligence Data Platform"</strong> for pricing and inventory optimization, and a <strong>"Machine Learning Engineering"</strong> group to transform data into real-time insights <a href="https://careers.expediagroup.com/jobs/" target="_blank">[5]</a>.</p>
+
+  <div class="card card-accent">
+    <h4>Key Signals from Job Postings</h4>
+    <p>Job descriptions emphasize the need to <strong>"scale our batch datasets to allow for fast and accurate data analytics"</strong> and to build <strong>"robust machine learning pipelines which process massive amounts of data at scale and speed."</strong> The requirement for experience with distributed data systems (AWS/Hadoop) and a diverse technology stack (Spark, Kafka, Hive, Airflow, Kubernetes, SageMaker, Databricks) confirms the complexity of the data environment. The explicit goal of building a <strong>"next generation of scalable real-time and batch data products and services"</strong> is a direct opening for VAST Data's platform. <a href="https://careers.expediagroup.com/job/data-engineer/gurgaon-Hary%C4%81na/R-100777/" target="_blank">[12]</a></p>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 7: COMPETITIVE LANDSCAPE ==================== -->
+<section class="chapter" id="chapter7">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 7</div>
+    <h2 class="chapter-title">Competitive Landscape</h2>
+    <p class="chapter-intro">How Expedia Group's data infrastructure compares to its primary competitors in the online travel industry.</p>
+  </div>
+
+  <p>Understanding the competitive landscape is essential for positioning VAST Data's value proposition. Expedia Group operates in a fiercely competitive market where data infrastructure capabilities are increasingly becoming a source of competitive advantage. The following analysis compares the data strategies of the four largest online travel platforms.</p>
+
+  <h3>Industry Comparison</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Company</th><th>Revenue</th><th>Data Strategy</th><th>AI Focus</th><th>Primary Cloud</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Expedia Group</strong></td>
+        <td>~$14.4B</td>
+        <td>70+ PB, data mesh, Databricks</td>
+        <td>1,500+ AI agents, 60+ LLMs</td>
+        <td>AWS (since 2012)</td>
+      </tr>
+      <tr>
+        <td><strong>Booking Holdings</strong></td>
+        <td>~$23B</td>
+        <td>Snowflake, ultra-low latency feature platform</td>
+        <td>AI trip planner, Kayak AI</td>
+        <td>Google Cloud + AWS</td>
+      </tr>
+      <tr>
+        <td><strong>Airbnb</strong></td>
+        <td>~$11B</td>
+        <td>Custom "Mussel" key-value store, petabyte-scale</td>
+        <td>AI concierge, services platform</td>
+        <td>AWS</td>
+      </tr>
+      <tr>
+        <td><strong>Trip.com</strong></td>
+        <td>~$7B</td>
+        <td>TiDB (HTAP), real-time CDP</td>
+        <td>AI travel assistant</td>
+        <td>Multi-cloud</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Competitor Deep Dives</h3>
+
+  <div class="card card-primary">
+    <h4>Booking Holdings (~$23B Revenue)</h4>
+    <p>Booking Holdings has built a sophisticated, modern data infrastructure on a cloud-native stack. They leverage <strong>Snowflake</strong> for their data warehouse, <strong>Kubernetes</strong> for container orchestration, and a suite of AWS services including <strong>Amazon SageMaker</strong> for machine learning and <strong>Amazon ElastiCache</strong> for their ultra-low latency feature platform. This platform is critical for real-time ML predictions such as ranking and fraud detection. Booking also uses <strong>Immuta</strong> for data governance and security. <a href="https://www.immuta.com/blog/how-booking-com-streamlines-snowflake-aws-data-security/" target="_blank">[13]</a> <a href="https://aws-news.com/article/2025-12-15-inside-bookingcoms-ultra-low-latency-feature-platform-with-amazon-elasticache" target="_blank">[14]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Airbnb (~$11B Revenue)</h4>
+    <p>Airbnb has invested heavily in custom data infrastructure, building <strong>"Mussel"</strong> &mdash; a petabyte-scale key-value store for derived data. Mussel uses a sharded architecture with Apache Helix for management and Kafka for write-ahead logging, employing a leaderless replication model for high availability on read-heavy workloads. Airbnb also uses a delta-loading approach to reduce daily data loads from their data warehouse. The fact that Airbnb felt compelled to build custom infrastructure highlights the limitations of off-the-shelf solutions for travel-scale data workloads. <a href="https://blog.bytebytego.com/p/how-airbnb-built-a-key-value-store" target="_blank">[15]</a></p>
+  </div>
+
+  <div class="card card-primary">
+    <h4>Trip.com (~$7B Revenue)</h4>
+    <p>Trip.com has built a real-time Customer Data Platform (CDP) using a <strong>Hybrid Transactional/Analytical Processing (HTAP)</strong> architecture powered by <strong>TiDB</strong>, a distributed SQL database. This approach handles both OLTP and OLAP workloads, simplifying their IT architecture and improving real-time query performance. Trip.com also utilizes a combination of Kappa and Lambda architectures for data processing. <a href="https://www.pingcap.com/case-study/trip-com-boosts-real-time-data-processing-and-financial-settlement-with-tidb/" target="_blank">[16]</a></p>
+  </div>
+
+  <h3>Competitive Implications for VAST Data</h3>
+
+  <p>The competitive landscape reveals several important dynamics that strengthen the case for VAST Data at Expedia:</p>
+
+  <div class="card card-accent">
+    <p><strong>All major travel platforms are investing heavily in data infrastructure.</strong> This is not a discretionary spend &mdash; it is a competitive necessity. Expedia cannot afford to fall behind Booking Holdings or Airbnb in data platform capabilities.</p>
+    <p><strong>Custom solutions are reaching their limits.</strong> Airbnb's decision to build Mussel from scratch, and Trip.com's adoption of TiDB, suggest that generic cloud-native storage is insufficient for travel-scale workloads. VAST Data's purpose-built platform addresses this gap.</p>
+    <p><strong>Real-time performance is table stakes.</strong> Booking's ultra-low latency feature platform and Trip.com's real-time CDP demonstrate that the industry is moving toward real-time data access as a baseline requirement. VAST's all-flash architecture is designed for exactly this.</p>
+    <p><strong>No confirmed VAST competitor at Expedia.</strong> Based on the research, Expedia's current storage is primarily AWS S3/EBS/EFS with on-premises storage for Oracle ERP. The AI workload opportunity is likely greenfield for VAST Data.</p>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 8: VAST DATA VALUE PROPOSITION ==================== -->
+<section class="chapter" id="chapter8">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 8</div>
+    <h2 class="chapter-title">VAST Data Value Proposition for Expedia Group</h2>
+    <p class="chapter-intro">How VAST Data's platform capabilities align with Expedia's most pressing infrastructure needs.</p>
+  </div>
+
+  <p>The research presented in this report reveals a clear and compelling alignment between Expedia Group's infrastructure challenges and VAST Data's platform capabilities. The following value propositions are grounded in the specific pain points, strategic priorities, and technology decisions documented throughout this report.</p>
+
+  <div class="value-grid">
+
+    <div class="value-card">
+      <div class="value-num">1</div>
+      <h4>Consolidating the 70 PB Data Estate</h4>
+      <p>Expedia's 70+ petabyte data estate, accumulated through years of acquisitions and organic growth, is fragmented across multiple systems and regions. VAST Data's unified storage platform can consolidate this fragmented data into a single, high-performance namespace &mdash; eliminating silos without requiring costly data migration projects. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">2</div>
+      <h4>Powering the AI Workload Explosion</h4>
+      <p>With 1,500+ AI agents, 60+ LLMs, and 143 million AI conversations per year, Expedia's AI workloads demand a data platform built for high-throughput, low-latency access. VAST's AI Operating System is purpose-built for these workloads, from data preparation through model training and real-time inference. The VAST DataEngine can accelerate inference workloads across Expedia's multi-LLM environment. <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">[2]</a></p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">3</div>
+      <h4>Enabling the Data Mesh Architecture</h4>
+      <p>Expedia is transitioning to a data mesh model to address data silos and improve cross-functional data access. VAST's namespace capabilities natively support federated data access across regions and business units, aligning perfectly with the data mesh paradigm. This eliminates the need for complex data replication tools like Circus Train that have proven costly and error-prone. <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">[7]</a></p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">4</div>
+      <h4>Solving Cross-Region Data Access</h4>
+      <p>Expedia's global operations require data access across multiple AWS regions, creating performance bottlenecks and high egress costs. VAST's global data fabric provides unified cross-region access without the latency, cost, and complexity of data replication &mdash; directly addressing one of the most persistent infrastructure challenges identified by the Chief Architect.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">5</div>
+      <h4>Consumer/B2B Data Isolation</h4>
+      <p>As Expedia's B2B segment grows at 18&ndash;26% annually, the need to maintain strict data separation between consumer and B2B workloads while enabling unified analytics becomes increasingly critical. VAST's multi-tenancy and data governance features provide the isolation and access controls required for this complex data governance challenge.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">6</div>
+      <h4>Accelerating Platform Consolidation</h4>
+      <p>Expedia has already demonstrated a commitment to consolidation (21 platforms to 1, 9 ML platforms to 1). VAST Data can be the unified data layer that completes this consolidation at the storage and data management level, reducing the number of point solutions and simplifying the overall architecture. <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">[1]</a></p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-num">7</div>
+      <h4>Delivering Cost Optimization</h4>
+      <p>With CFO Scott Schenkel focused on margin expansion (208 basis points in Q3 2025) and aggressive capital returns, Expedia is receptive to solutions that reduce total cost of ownership. VAST's efficiency advantages over cloud-native storage &mdash; combined with the elimination of egress costs, replication overhead, and multi-tool complexity &mdash; present a compelling financial case.</p>
+    </div>
+
+  </div>
+
+  <h3>Current Incumbent Storage (Likely)</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Storage Type</th><th>Likely Incumbent</th><th>VAST Data Opportunity</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cloud Storage</td><td>AWS S3 / EBS / EFS</td><td>Performance and cost optimization for AI workloads</td></tr>
+      <tr><td>On-Premises</td><td>Legacy (likely Dell EMC or NetApp) for Oracle ERP</td><td>Modernization of on-prem data center</td></tr>
+      <tr><td>AI Workloads</td><td>No confirmed VAST competitor</td><td><strong>Greenfield opportunity</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 9: GLOBAL FOOTPRINT ==================== -->
+<section class="chapter" id="chapter9">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 9</div>
+    <h2 class="chapter-title">Global Footprint &amp; Office Locations</h2>
+    <p class="chapter-intro">Expedia Group's worldwide presence and key engineering centers.</p>
+  </div>
+
+  <h3>Headquarters</h3>
+
+  <p>Expedia Group's headquarters is located at <strong>1111 Expedia Group Way W, Seattle, WA 98119</strong>. The campus is a 40-acre waterfront site on Elliott Bay, encompassing 950,000 square feet and housing approximately 5,000 of the company's ~17,000 worldwide employees. The campus was designed by ZGF Architects and is one of the most prominent corporate campuses in the Pacific Northwest.</p>
+
+  <h3>Key Office Locations</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Location</th><th>Region</th><th>Function / Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Seattle, WA (HQ)</strong></td><td>North America</td><td>40-acre waterfront campus, ~5,000 employees</td></tr>
+      <tr><td><strong>Austin, TX</strong></td><td>North America</td><td>Major engineering hub</td></tr>
+      <tr><td><strong>Chicago, IL</strong></td><td>North America</td><td>Operations</td></tr>
+      <tr><td><strong>Dallas, TX</strong></td><td>North America</td><td>Operations</td></tr>
+      <tr><td><strong>New York City, NY</strong></td><td>North America</td><td>Business operations</td></tr>
+      <tr><td><strong>Bangalore, India</strong></td><td>Asia</td><td>Major engineering center</td></tr>
+      <tr><td><strong>Gurgaon, India</strong></td><td>Asia</td><td>Engineering and operations (active hiring for data engineers)</td></tr>
+      <tr><td><strong>London, England</strong></td><td>Europe</td><td>European headquarters</td></tr>
+      <tr><td><strong>Madrid, Spain</strong></td><td>Europe</td><td>European operations</td></tr>
+    </tbody>
+  </table>
+
+  <p>The distribution of engineering talent across Seattle, Austin, Bangalore, and Gurgaon is particularly relevant to the cross-region data access challenges discussed in Chapter 3. Engineering teams in India working with data hosted in US-based AWS regions experience the latency and egress cost issues that VAST's global data fabric is designed to solve.</p>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== CHAPTER 10: ACTION PLAN ==================== -->
+<section class="chapter" id="chapter10">
+  <div class="chapter-header">
+    <div class="chapter-number">Chapter 10</div>
+    <h2 class="chapter-title">Summary &amp; Proposed Action Plan</h2>
+    <p class="chapter-intro">Key takeaways and a recommended engagement strategy for VAST Data.</p>
+  </div>
+
+  <h3>Key Takeaways</h3>
+
+  <div class="card card-accent">
+    <p>Expedia Group is a <strong>high-value, strategically aligned opportunity</strong> for VAST Data. The company is managing a 70+ petabyte data estate, deploying AI at unprecedented scale (1,500+ agents, 60+ LLMs), transitioning to a data mesh architecture, and actively seeking to consolidate and modernize its infrastructure. The CTO has explicitly identified "data infrastructure" as one of four core AI priorities. The CFO is focused on cost optimization. The B2B segment is growing at 18&ndash;26% and creating acute data infrastructure demands. And critically, there is no confirmed VAST competitor in place for AI workloads &mdash; this is a greenfield opportunity.</p>
+  </div>
+
+  <h3>Proposed Engagement Strategy</h3>
+
+  <div class="action-timeline">
+
+    <div class="action-step">
+      <span class="timeline-label">Week 1&ndash;2</span>
+      <h4>Initial Outreach &amp; Executive Mapping</h4>
+      <p>Initiate contact with <strong>Ramana Thumu (CTO)</strong> and <strong>Rajesh Naidu (SVP &amp; Chief Architect)</strong> as the primary technical decision-makers. Reference their publicly stated priorities: data infrastructure modernization, AI workload scalability, and platform consolidation. Use the specific pain points documented in this report (cross-region data access, data silos, pipeline reliability) to demonstrate deep understanding of their challenges.</p>
+    </div>
+
+    <div class="action-step">
+      <span class="timeline-label">Week 2&ndash;4</span>
+      <h4>Technical Discovery &amp; Value Alignment</h4>
+      <p>Arrange a technical discovery session to validate the pain points identified in this report and understand the specific architecture of Expedia's data infrastructure. Focus on quantifying the cost of cross-region data replication, the performance limitations of current AI workload infrastructure, and the operational overhead of managing multiple point solutions. Engage the data engineering teams in Bangalore and Gurgaon who are most directly affected by cross-region data access challenges.</p>
+    </div>
+
+    <div class="action-step">
+      <span class="timeline-label">Week 4&ndash;6</span>
+      <h4>Proof of Concept Proposal</h4>
+      <p>Propose a targeted proof of concept focused on one of Expedia's highest-impact use cases &mdash; likely AI/ML workload acceleration or cross-region data access optimization. Design the POC to deliver measurable results in performance improvement, cost reduction, and operational simplification. Ensure the POC scope aligns with the CTO's stated priority of "data infrastructure" as a foundation for AI.</p>
+    </div>
+
+    <div class="action-step">
+      <span class="timeline-label">Week 6&ndash;10</span>
+      <h4>POC Execution &amp; ROI Documentation</h4>
+      <p>Execute the proof of concept with close collaboration from Expedia's data engineering and platform teams. Document results in terms that resonate with both technical stakeholders (performance benchmarks, latency reduction, throughput improvement) and financial stakeholders (cost savings, TCO reduction, operational efficiency gains). Prepare a business case for CFO Scott Schenkel that quantifies the margin impact.</p>
+    </div>
+
+    <div class="action-step">
+      <span class="timeline-label">Week 10&ndash;14</span>
+      <h4>Executive Presentation &amp; Expansion Roadmap</h4>
+      <p>Present POC results to the executive team, including CTO Ramana Thumu, CFO Scott Schenkel, and CEO Ariane Gorin. Frame the conversation around Expedia's strategic priorities: AI-first transformation, platform consolidation, B2B growth, and margin expansion. Propose an expansion roadmap that positions VAST Data as the unified data layer for Expedia's entire 70+ PB data estate.</p>
+    </div>
+
+  </div>
+
+  <h3>Recommended Messaging by Stakeholder</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Stakeholder</th><th>Primary Message</th><th>Supporting Evidence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>CTO (Ramana Thumu)</strong></td><td>VAST is the data infrastructure foundation for your AI-first transformation</td><td>AI Playground scale, 1,500+ agents, data infrastructure as core priority</td></tr>
+      <tr><td><strong>Chief Architect (Rajesh Naidu)</strong></td><td>VAST solves your cross-region data access and pipeline reliability challenges</td><td>70+ PB estate, Alluxio/Circus Train pain, data observability investment</td></tr>
+      <tr><td><strong>CFO (Scott Schenkel)</strong></td><td>VAST reduces TCO while improving performance and simplifying operations</td><td>208bps margin expansion focus, egress cost reduction, consolidation savings</td></tr>
+      <tr><td><strong>CEO (Ariane Gorin)</strong></td><td>VAST enables competitive differentiation through superior data capabilities</td><td>HBR AI threat article, Booking/Airbnb infrastructure investments</td></tr>
+      <tr><td><strong>President, B2B (Alfonso Paredes)</strong></td><td>VAST provides the scalable, isolated data platform for B2B growth</td><td>18&ndash;26% B2B growth, API performance needs, consumer/B2B data separation</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-divider"></div>
+</section>
+
+<!-- ==================== THANK YOU ==================== -->
+<section class="thank-you-section" id="thank-you">
+  <h2>Thank You, Julia</h2>
+  <p>On behalf of the entire team at <a href="https://bestpaidrep.com" target="_blank">BestPaidRep.com</a>, I want to express my sincere gratitude that you have chosen to use our services. It is an honor to support the work you do at VAST Data, and I am genuinely excited about the opportunity that Expedia Group represents for your team.</p>
+  <p>This report was built with one goal in mind: to give you the intelligence advantage that transforms a sales conversation from transactional to consultative. When you walk into a meeting with Expedia's technology leadership, you will know their pain points before they articulate them, understand their strategic priorities before they explain them, and speak their language from the very first interaction.</p>
+  <p>That is the power of great intelligence. And that is what BestPaidRep.com was built to deliver.</p>
+  <p>If you have any questions about this report, need additional research on specific topics, or want to discuss engagement strategy, please do not hesitate to reach out. I am here to help you close this opportunity.</p>
+  <img src="https://i.postimg.cc/gc2VTkM6/znw_Vkxg_KEze_Mq_Uum.jpg" alt="JB - Founder, BestPaidRep.com" style="width:100px; height:100px; border-radius:50%; border:3px solid var(--accent); object-fit:cover; margin:0 auto 1rem; display:block;">
+  <div class="signature">JB</div>
+  <div class="signature-title">Founder, <a href="https://bestpaidrep.com" target="_blank">BestPaidRep.com</a></div>
+  <a href="https://johnkilakowske.com" target="_blank" style="display:block; text-align:center; font-size:0.85rem; color:var(--accent); margin-top:0.5rem;">johnkilakowske.com</a>
+  <p style="margin-top:2rem; font-size:0.85rem; color:rgba(255,255,255,0.5);">"Giving enterprise sales professionals the intelligence advantage."</p>
+</section>
+
+<!-- ==================== SOURCES & CITATIONS ==================== -->
+<section class="chapter" id="sources">
+  <div class="chapter-header">
+    <div class="chapter-number">Appendix</div>
+    <h2 class="chapter-title">Sources &amp; Citations</h2>
+    <p class="chapter-intro">Complete list of all sources referenced in this report. All links are clickable for independent verification.</p>
+  </div>
+
+  <ol class="sources-list" style="list-style:none; counter-reset:source-counter; padding:0;">
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">1</span>
+      <strong>The New Stack</strong> &mdash; "How Expedia Group Moved from 21 Platform Stacks to 1"<br>
+      <a href="https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/" target="_blank">https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">2</span>
+      <strong>Fortune</strong> &mdash; Expedia CTO Ramana Thumu AI Strategy (January 14, 2026)<br>
+      <a href="https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/" target="_blank">https://fortune.com/2026/01/14/how-expedias-cto-is-using-ai-to-transform-work-for-17000-employees-and-travel-for-millions/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">3</span>
+      <strong>Expedia Group</strong> &mdash; Q1 2025 Earnings Call Transcript (SEC Filing)<br>
+      <a href="https://s202.q4cdn.com/757635260/files/doc_financials/2025/q1/EXPE-USQ_Transcript_2025-05-08.pdf" target="_blank">https://s202.q4cdn.com/757635260/files/doc_financials/2025/q1/EXPE-USQ_Transcript_2025-05-08.pdf</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">4</span>
+      <strong>Expedia Group Partner Solutions</strong> &mdash; "Building the Next Generation of B2B Travel Technology"<br>
+      <a href="https://partner.expediagroup.com/en-us/resources/blog/building-next-generation-of-b2b-travel-technology" target="_blank">https://partner.expediagroup.com/en-us/resources/blog/building-next-generation-of-b2b-travel-technology</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">5</span>
+      <strong>Expedia Group Careers</strong> &mdash; Job Postings (Data Engineer, ML Ops, Platform Engineering)<br>
+      <a href="https://careers.expediagroup.com/jobs/" target="_blank">https://careers.expediagroup.com/jobs/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">6</span>
+      <strong>Databricks</strong> &mdash; Expedia Group Case Study (July 2025)<br>
+      <a href="https://www.databricks.com/blog" target="_blank">https://www.databricks.com/blog</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">7</span>
+      <strong>Alluxio</strong> &mdash; "Unifying Cross-Region Access in the Cloud at Expedia Group"<br>
+      <a href="https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world" target="_blank">https://www.alluxio.io/blog/unifying-cross-region-access-in-the-cloud-at-expedia-group-the-path-toward-data-mesh-in-the-brand-world</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">8</span>
+      <strong>Glassdoor</strong> &mdash; Expedia Group Reviews<br>
+      <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Reviews-E9876.htm" target="_blank">https://www.glassdoor.com/Reviews/Expedia-Group-Reviews-E9876.htm</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">9</span>
+      <strong>Reddit</strong> &mdash; AMA with Expedia Software Engineer (2020)<br>
+      <a href="https://www.reddit.com/r/AMA/comments/f0mwx1/software_engineer_at_expedia_group/" target="_blank">https://www.reddit.com/r/AMA/comments/f0mwx1/software_engineer_at_expedia_group/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">10</span>
+      <strong>Hacker News</strong> &mdash; "Expedia to Eliminate 1,500 Jobs as Travel Growth Moderates" (2024)<br>
+      <a href="https://news.ycombinator.com/item?id=39518590" target="_blank">https://news.ycombinator.com/item?id=39518590</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">11</span>
+      <strong>Kotlin</strong> &mdash; Expedia Group Server-Side Case Study<br>
+      <a href="https://kotlinlang.org/lp/server-side/case-studies/expedia/" target="_blank">https://kotlinlang.org/lp/server-side/case-studies/expedia/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">12</span>
+      <strong>Expedia Group Careers</strong> &mdash; Data Engineer, Gurgaon (Job Posting R-100777)<br>
+      <a href="https://careers.expediagroup.com/job/data-engineer/gurgaon-Hary%C4%81na/R-100777/" target="_blank">https://careers.expediagroup.com/job/data-engineer/gurgaon-Hary%C4%81na/R-100777/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">13</span>
+      <strong>Immuta</strong> &mdash; "How Booking.com Streamlines Snowflake &amp; AWS Data Security"<br>
+      <a href="https://www.immuta.com/blog/how-booking-com-streamlines-snowflake-aws-data-security/" target="_blank">https://www.immuta.com/blog/how-booking-com-streamlines-snowflake-aws-data-security/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">14</span>
+      <strong>AWS News</strong> &mdash; "Inside Booking.com's Ultra-Low Latency Feature Platform with Amazon ElastiCache"<br>
+      <a href="https://aws-news.com/article/2025-12-15-inside-bookingcoms-ultra-low-latency-feature-platform-with-amazon-elasticache" target="_blank">https://aws-news.com/article/2025-12-15-inside-bookingcoms-ultra-low-latency-feature-platform-with-amazon-elasticache</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">15</span>
+      <strong>ByteByteGo</strong> &mdash; "How Airbnb Built a Key-Value Store"<br>
+      <a href="https://blog.bytebytego.com/p/how-airbnb-built-a-key-value-store" target="_blank">https://blog.bytebytego.com/p/how-airbnb-built-a-key-value-store</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">16</span>
+      <strong>PingCAP</strong> &mdash; "Trip.com Boosts Real-Time Data Processing with TiDB"<br>
+      <a href="https://www.pingcap.com/case-study/trip-com-boosts-real-time-data-processing-and-financial-settlement-with-tidb/" target="_blank">https://www.pingcap.com/case-study/trip-com-boosts-real-time-data-processing-and-financial-settlement-with-tidb/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">17</span>
+      <strong>Expedia Group</strong> &mdash; 2024 Annual Report (SEC Filing)<br>
+      <a href="https://s202.q4cdn.com/757635260/files/doc_financials/2024/ar/EXPE2024ARS-FILED.pdf" target="_blank">https://s202.q4cdn.com/757635260/files/doc_financials/2024/ar/EXPE2024ARS-FILED.pdf</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">18</span>
+      <strong>AltexSoft</strong> &mdash; "Expedia Leans Into a Travel Tech Identity with AI Initiatives"<br>
+      <a href="https://www.altexsoft.com/travel-industry-news/expedia-leans-into-a-travel-tech-identity-with-ai-initiatives/" target="_blank">https://www.altexsoft.com/travel-industry-news/expedia-leans-into-a-travel-tech-identity-with-ai-initiatives/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">19</span>
+      <strong>Yahoo Finance</strong> &mdash; "Expedia Group &amp; Affirm Deepen Partnership"<br>
+      <a href="https://finance.yahoo.com/news/expedia-group-affirm-deepen-partnership-140000047.html" target="_blank">https://finance.yahoo.com/news/expedia-group-affirm-deepen-partnership-140000047.html</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">20</span>
+      <strong>Expedia Group Investors</strong> &mdash; Tiqets Acquisition Announcement<br>
+      <a href="https://www.expediagroup.com/investors/news-and-events/news/news-details/2025/Expedia-Group-Announces-Agreement-to-Acquire-Tiqets-to-Expand-Global-Activities-and-Experiences/default.aspx" target="_blank">https://www.expediagroup.com/investors/news-and-events/news/news-details/2025/Expedia-Group-Announces-Agreement-to-Acquire-Tiqets-to-Expand-Global-Activities-and-Experiences/default.aspx</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">21</span>
+      <strong>Glassdoor</strong> &mdash; Expedia Group Tech Reviews<br>
+      <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Tech-Reviews-EI_IE9876.0,13_KO14,18.htm" target="_blank">https://www.glassdoor.com/Reviews/Expedia-Group-Tech-Reviews-EI_IE9876.0,13_KO14,18.htm</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">22</span>
+      <strong>Glassdoor</strong> &mdash; Expedia Group Data Engineer Reviews<br>
+      <a href="https://www.glassdoor.com/Reviews/Expedia-Group-Data-Engineer-Reviews-EI_IE9876.0,13_KO14,27.htm" target="_blank">https://www.glassdoor.com/Reviews/Expedia-Group-Data-Engineer-Reviews-EI_IE9876.0,13_KO14,27.htm</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">23</span>
+      <strong>Reddit</strong> &mdash; "SDE II @ Expedia to SDE I at Amazon" Discussion (2024)<br>
+      <a href="https://www.reddit.com/r/cscareerquestions/comments/1g4f20e/sde_ii_expedia_to_sde_i_at_amazon/" target="_blank">https://www.reddit.com/r/cscareerquestions/comments/1g4f20e/sde_ii_expedia_to_sde_i_at_amazon/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+      <span class="source-num">24</span>
+      <strong>Expedia Group Careers</strong> &mdash; Data Engineer / ML Ops Engineer, Gurgaon (Job Posting R-99142)<br>
+      <a href="https://careers.expediagroup.com/job/data-engineer-ml-ops-engineer/gurgaon-Hary%C4%81na/R-99142/" target="_blank">https://careers.expediagroup.com/job/data-engineer-ml-ops-engineer/gurgaon-Hary%C4%81na/R-99142/</a>
+    </li>
+    <li style="counter-increment:source-counter; padding:0.75rem 0;">
+      <span class="source-num">25</span>
+      <strong>ZGF Architects</strong> &mdash; Expedia Group Seattle HQ (Campus Photography)<br>
+      <a href="https://www.zgf.com/projects/expedia-group-seattle-hq" target="_blank">https://www.zgf.com/projects/expedia-group-seattle-hq</a>
+    </li>
+  </ol>
+
+  <div class="section-divider"></div>
+
+  <p style="text-align:center; color:var(--text-muted); font-size:0.8rem; margin-top:2rem;">&copy; 2026 BestPaidRep.com. All rights reserved. This report is confidential and prepared exclusively for the intended recipient.</p>
+
+</section>
+
+</div>
+</body>
+</html>
